@@ -1,0 +1,2 @@
+*.v2 filter=lfs diff=lfs merge=lfs -text
+computer_education/code/knowledge_tracing/DKT/logs/train/events.out.tfevents.1597811994.f761b637aab5.36.3328.v2 filter=lfs diff=lfs merge=lfs -text

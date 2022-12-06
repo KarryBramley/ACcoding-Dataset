@@ -1,0 +1,50 @@
+dataset:
+  name: OJ_FB_2019
+  save_dir: valid_mrr
+  log_file: rgcn_mrr
+
+training:
+  epochs: 1000 # Maximum number of training epochs
+  # graph_batch_size: 30000  # Number of positive triples to sample during training
+  sampling_method: edge-neighborhood  # Sampling method for randomly selecting positive triples
+  negative_sampling:
+    sampling_rate: 10  # Number of negative samples to produce per positive triple
+    head_prob: 0.5  # Ratio of corrupting heads (i.e. 0.5 means corrupt 50% heads and 50% tails)
+  optimiser:
+    algorithm: adam
+    weight_decay: 0.00001
+    learn_rate: 0.001
+  use_weight: True  # Whether edges have weights. If true, relation add with '/[weight value]'.
+  use_cuda: True  # If true, model is trained on available GPUs.
+
+encoder:
+  model: rgcn
+  num_layers: 2  # Number of graph convolution layers
+  hidden1_size: 200  # Size of first hidden layer
+  hidden2_size: 200  # Size of first hidden layer
+  node_embedding: 200  # Size of node embedding
+#  decomposition:
+#    type: basis
+#    num_bases: 2
+  edge_dropout:
+    general: 0.3  # Dropout rate for all edges (except self-loops)
+    self_loop: 0  # Dropout rate for self-loops
+    self_loop_type: schlichtkrull-dropout
+  weight_init: schlichtkrull-normal  # Weight Initialisation
+  include_gain: False  # Add scaling factor depending on the type of non-linearity function used
+  bias_init: zeros  # Bias Initialisation (Delete this line to remove biases)
+
+decoder:
+  model: distmult
+  l2_penalty_type: 'schlichtkrull-l2'
+  l2_penalty: 1
+  loss_expand: 100
+  weight_init: standard-normal
+  include_gain: False  # Add scaling factor depending on the type of non-linearity function used
+
+evaluation:
+  use_valid: True # If true, use valid and test set to evaluate. Otherwise, only use test set.
+  filtered: True  # If true, reports filtered metrics. Otherwise, raw metrics are computed.
+  check_every: 5  # Evaluate model at regular intervals (By default, every 2000 epochs)
+  batch_size: 512  # Number of triples per evaluation batch
+  verbose: True  # Show evaluation progress bar

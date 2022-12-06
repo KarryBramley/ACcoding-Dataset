@@ -1,0 +1,704 @@
+configs: {'log_file': 'log_distmult', 'name': 'OJ_FB_2019daily_oltest', 'save_dir': 'OJ_FB_2019_daily_oltest'} {'epochs': 500, 'graph_batch_size': 30000, 'negative_sampling': {'head_prob': 0.5, 'sampling_rate': 10}, 'optimiser': {'algorithm': 'adam', 'learn_rate': 0.001, 'weight_decay': 0.0001}, 'sampling_method': 'edge-neighborhood', 'use_cuda': True, 'use_time': True, 'use_weight': False} {'activation': 'lrelu', 'bias_init': 'zeros', 'edge_dropout': {'general': 0.3, 'self_loop': 0.2, 'self_loop_type': 'schlichtkrull-dropout'}, 'hidden1_size': 200, 'hidden2_size': 200, 'include_gain': False, 'lstm_weight_init': 'xavier-normal', 'model': 'rgcn', 'node_embedding': 200, 'num_layers': 2, 'rgcn_weight_init': 'schlichtkrull-normal'} {'include_gain': False, 'l2_penalty': 1, 'l2_penalty_type': 'schlichtkrull-l2', 'loss_expand': 100, 'model': 'distmult', 'weight_init': 'standard-normal'} {'batch_size': 512, 'check_every': 50, 'filtered': True, 'use_valid': False, 'verbose': True}
+num_nodes = 5169 num_relations = 11
+[Epoch 1] Loss: 127.0046844 Forward: 21.949s Backward: 116.324s 
+[Epoch 2] Loss: 126.9990463 Forward: 20.931s Backward: 111.776s 
+[Epoch 3] Loss: 126.9937592 Forward: 31.453s Backward: 104.875s 
+[Epoch 4] Loss: 126.9876251 Forward: 21.858s Backward: 131.478s 
+[Epoch 5] Loss: 126.9824142 Forward: 28.149s Backward: 112.656s 
+[Epoch 6] Loss: 126.9744339 Forward: 29.100s Backward: 154.109s 
+[Epoch 7] Loss: 126.9679184 Forward: 30.312s Backward: 127.626s 
+[Epoch 8] Loss: 126.9602356 Forward: 32.260s Backward: 209.641s 
+[Epoch 9] Loss: 126.9513779 Forward: 22.289s Backward: 206.862s 
+[Epoch 10] Loss: 126.9433365 Forward: 25.521s Backward: 116.085s 
+[Epoch 11] Loss: 126.9342880 Forward: 25.723s Backward: 167.130s 
+[Epoch 12] Loss: 126.9244308 Forward: 30.695s Backward: 125.291s 
+[Epoch 13] Loss: 126.9143143 Forward: 21.881s Backward: 225.806s 
+[Epoch 14] Loss: 126.8997116 Forward: 34.437s Backward: 173.751s 
+[Epoch 15] Loss: 126.8864975 Forward: 37.393s Backward: 146.167s 
+[Epoch 16] Loss: 126.8734283 Forward: 23.488s Backward: 112.988s 
+[Epoch 17] Loss: 126.8590240 Forward: 36.331s Backward: 137.520s 
+[Epoch 18] Loss: 126.8421021 Forward: 23.665s Backward: 119.546s 
+[Epoch 19] Loss: 126.8274612 Forward: 21.609s Backward: 162.055s 
+[Epoch 20] Loss: 126.8081741 Forward: 27.181s Backward: 143.641s 
+[Epoch 21] Loss: 126.7887497 Forward: 25.439s Backward: 132.585s 
+[Epoch 22] Loss: 126.7662125 Forward: 28.279s Backward: 142.163s 
+[Epoch 23] Loss: 126.7499771 Forward: 23.892s Backward: 179.148s 
+[Epoch 24] Loss: 126.7213135 Forward: 25.586s Backward: 234.311s 
+[Epoch 25] Loss: 126.6983719 Forward: 29.374s Backward: 140.528s 
+[Epoch 26] Loss: 126.6650009 Forward: 23.637s Backward: 165.187s 
+[Epoch 27] Loss: 126.6395569 Forward: 23.578s Backward: 160.164s 
+[Epoch 28] Loss: 126.6145020 Forward: 20.510s Backward: 325.909s 
+[Epoch 29] Loss: 126.5835724 Forward: 26.412s Backward: 128.317s 
+[Epoch 30] Loss: 126.5526962 Forward: 26.919s Backward: 166.590s 
+[Epoch 31] Loss: 126.5163651 Forward: 31.865s Backward: 143.827s 
+[Epoch 32] Loss: 126.4750061 Forward: 24.579s Backward: 168.614s 
+[Epoch 33] Loss: 126.4426575 Forward: 42.688s Backward: 127.963s 
+[Epoch 34] Loss: 126.3931580 Forward: 25.305s Backward: 198.703s 
+[Epoch 35] Loss: 126.3510437 Forward: 23.530s Backward: 124.907s 
+[Epoch 36] Loss: 126.3083572 Forward: 23.732s Backward: 108.169s 
+[Epoch 37] Loss: 126.2573776 Forward: 37.405s Backward: 210.678s 
+[Epoch 38] Loss: 126.2193604 Forward: 32.427s Backward: 151.466s 
+[Epoch 39] Loss: 126.1765442 Forward: 25.013s Backward: 164.382s 
+[Epoch 40] Loss: 126.1120377 Forward: 23.787s Backward: 148.127s 
+[Epoch 41] Loss: 126.0580673 Forward: 31.451s Backward: 160.649s 
+[Epoch 42] Loss: 125.9984818 Forward: 30.055s Backward: 225.945s 
+[Epoch 43] Loss: 125.9343338 Forward: 36.173s Backward: 145.531s 
+[Epoch 44] Loss: 125.8774948 Forward: 29.028s Backward: 179.237s 
+[Epoch 45] Loss: 125.8249893 Forward: 30.095s Backward: 156.456s 
+[Epoch 46] Loss: 125.7523575 Forward: 26.147s Backward: 164.716s 
+[Epoch 47] Loss: 125.6847610 Forward: 25.717s Backward: 106.215s 
+[Epoch 48] Loss: 125.5949631 Forward: 25.802s Backward: 116.866s 
+[Epoch 49] Loss: 125.5437546 Forward: 24.693s Backward: 161.525s 
+[Epoch 50] Loss: 125.4498596 Forward: 24.512s Backward: 193.352s 
+embeddings: tensor([[ 7.8270e-02,  7.2723e-02,  6.4815e-02,  ...,  7.4941e-02,
+          6.1865e-02, -1.5951e-04],
+        [ 5.0816e-02,  5.3088e-02,  6.9758e-02,  ...,  4.4680e-02,
+          3.3695e-02, -6.1435e-05],
+        [ 7.8449e-02,  7.5199e-02,  6.6755e-02,  ...,  6.9772e-02,
+          5.8495e-02, -1.3156e-04],
+        ...,
+        [ 7.7904e-02,  6.4775e-02,  6.0152e-02,  ...,  6.4841e-02,
+          6.2807e-02, -1.8976e-04],
+        [ 8.3169e-02,  7.1644e-02,  6.7745e-02,  ...,  7.2916e-02,
+          6.3128e-02, -1.3935e-04],
+        [ 5.8141e-02,  5.7704e-02,  5.8482e-02,  ...,  5.9932e-02,
+          5.0470e-02, -1.0007e-04]])
+[Epoch 50]
+==================== Evaluation ====================
+F1: 0.0652 	
+MAP: 0.0673 	
+MRR: 0.1007 	
+MNDCG: 0.1167 	
+get best model!
+[Epoch 51] Loss: 125.3858490 Forward: 31.886s Backward: 109.541s 
+[Epoch 52] Loss: 125.2884903 Forward: 20.547s Backward: 95.633s 
+[Epoch 53] Loss: 125.2115555 Forward: 21.136s Backward: 101.220s 
+[Epoch 54] Loss: 125.1032028 Forward: 20.406s Backward: 104.680s 
+[Epoch 55] Loss: 125.0161209 Forward: 19.989s Backward: 107.171s 
+[Epoch 56] Loss: 124.9179001 Forward: 22.130s Backward: 108.580s 
+[Epoch 57] Loss: 124.8644104 Forward: 21.553s Backward: 103.662s 
+[Epoch 58] Loss: 124.7391663 Forward: 22.136s Backward: 104.864s 
+[Epoch 59] Loss: 124.5879898 Forward: 20.006s Backward: 104.000s 
+[Epoch 60] Loss: 124.4865875 Forward: 20.185s Backward: 106.334s 
+[Epoch 61] Loss: 124.4082108 Forward: 20.165s Backward: 105.184s 
+[Epoch 62] Loss: 124.2862320 Forward: 21.994s Backward: 97.119s 
+[Epoch 63] Loss: 124.1911163 Forward: 20.623s Backward: 101.391s 
+[Epoch 64] Loss: 124.0335388 Forward: 21.786s Backward: 101.697s 
+[Epoch 65] Loss: 123.9594269 Forward: 20.833s Backward: 94.473s 
+[Epoch 66] Loss: 123.7612915 Forward: 20.201s Backward: 96.731s 
+[Epoch 67] Loss: 123.6303864 Forward: 21.204s Backward: 103.148s 
+[Epoch 68] Loss: 123.6042328 Forward: 20.138s Backward: 101.192s 
+[Epoch 69] Loss: 123.3614197 Forward: 21.682s Backward: 101.716s 
+[Epoch 70] Loss: 123.2436295 Forward: 20.506s Backward: 101.566s 
+[Epoch 71] Loss: 123.1519012 Forward: 19.850s Backward: 88.753s 
+[Epoch 72] Loss: 122.9789124 Forward: 20.919s Backward: 103.914s 
+[Epoch 73] Loss: 122.8341446 Forward: 21.803s Backward: 61.868s 
+[Epoch 74] Loss: 122.6712799 Forward: 20.130s Backward: 103.569s 
+[Epoch 75] Loss: 122.4873581 Forward: 20.228s Backward: 106.298s 
+[Epoch 76] Loss: 122.3300858 Forward: 21.070s Backward: 103.605s 
+[Epoch 77] Loss: 122.1806107 Forward: 21.046s Backward: 96.293s 
+[Epoch 78] Loss: 121.9670258 Forward: 21.296s Backward: 105.498s 
+[Epoch 79] Loss: 121.8132401 Forward: 20.219s Backward: 108.072s 
+[Epoch 80] Loss: 121.7310410 Forward: 20.533s Backward: 99.245s 
+[Epoch 81] Loss: 121.5532074 Forward: 19.901s Backward: 80.393s 
+[Epoch 82] Loss: 121.3913803 Forward: 20.935s Backward: 84.080s 
+[Epoch 83] Loss: 121.1664429 Forward: 20.988s Backward: 97.620s 
+[Epoch 84] Loss: 121.0185013 Forward: 22.783s Backward: 104.234s 
+[Epoch 85] Loss: 120.8783569 Forward: 20.489s Backward: 80.695s 
+[Epoch 86] Loss: 120.6938629 Forward: 21.138s Backward: 102.538s 
+[Epoch 87] Loss: 120.5356445 Forward: 20.142s Backward: 102.194s 
+[Epoch 88] Loss: 120.2258072 Forward: 21.673s Backward: 98.386s 
+[Epoch 89] Loss: 120.2156296 Forward: 21.008s Backward: 104.217s 
+[Epoch 90] Loss: 119.9021912 Forward: 20.713s Backward: 96.895s 
+[Epoch 91] Loss: 119.6018372 Forward: 21.230s Backward: 103.492s 
+[Epoch 92] Loss: 119.5786896 Forward: 20.815s Backward: 105.233s 
+[Epoch 93] Loss: 119.1805496 Forward: 21.978s Backward: 105.506s 
+[Epoch 94] Loss: 119.1081924 Forward: 20.882s Backward: 102.819s 
+[Epoch 95] Loss: 118.9057465 Forward: 21.038s Backward: 97.248s 
+[Epoch 96] Loss: 118.7348404 Forward: 20.546s Backward: 97.587s 
+[Epoch 97] Loss: 118.6091995 Forward: 21.395s Backward: 106.658s 
+[Epoch 98] Loss: 118.3926468 Forward: 20.751s Backward: 106.148s 
+[Epoch 99] Loss: 118.0914230 Forward: 22.086s Backward: 107.015s 
+[Epoch 100] Loss: 117.8760910 Forward: 21.112s Backward: 88.586s 
+embeddings: tensor([[ 1.7988e-01,  1.7289e-01,  1.5780e-01,  ...,  1.8119e-01,
+          1.6566e-01, -1.4528e-04],
+        [ 1.1355e-01,  1.1277e-01,  1.6971e-01,  ...,  1.1053e-01,
+          9.4463e-02, -6.7589e-05],
+        [ 1.7629e-01,  1.7319e-01,  1.5182e-01,  ...,  1.7137e-01,
+          1.5980e-01, -1.2611e-04],
+        ...,
+        [ 1.7417e-01,  1.6161e-01,  1.4957e-01,  ...,  1.6460e-01,
+          1.6309e-01, -1.7685e-04],
+        [ 1.8432e-01,  1.7180e-01,  1.5775e-01,  ...,  1.7846e-01,
+          1.6535e-01, -1.2461e-04],
+        [ 1.3686e-01,  1.3800e-01,  1.3289e-01,  ...,  1.4237e-01,
+          1.3037e-01, -1.0319e-04]])
+[Epoch 100]
+==================== Evaluation ====================
+F1: 0.0683 	
+MAP: 0.0821 	
+MRR: 0.1152 	
+MNDCG: 0.1309 	
+get best model!
+[Epoch 101] Loss: 117.7500839 Forward: 20.287s Backward: 82.029s 
+[Epoch 102] Loss: 117.5246277 Forward: 20.491s Backward: 56.976s 
+[Epoch 103] Loss: 116.9900284 Forward: 21.161s Backward: 93.570s 
+[Epoch 104] Loss: 117.0749969 Forward: 19.501s Backward: 65.254s 
+[Epoch 105] Loss: 116.9118195 Forward: 21.323s Backward: 101.798s 
+[Epoch 106] Loss: 116.4854889 Forward: 22.241s Backward: 103.169s 
+[Epoch 107] Loss: 116.5585709 Forward: 21.207s Backward: 99.994s 
+[Epoch 108] Loss: 116.2386856 Forward: 20.300s Backward: 80.700s 
+[Epoch 109] Loss: 115.7351074 Forward: 20.625s Backward: 104.254s 
+[Epoch 110] Loss: 115.6291504 Forward: 20.322s Backward: 103.667s 
+[Epoch 111] Loss: 115.5145874 Forward: 21.331s Backward: 106.178s 
+[Epoch 112] Loss: 115.2074966 Forward: 20.827s Backward: 103.675s 
+[Epoch 113] Loss: 115.1453629 Forward: 20.208s Backward: 87.997s 
+[Epoch 114] Loss: 114.8017120 Forward: 22.637s Backward: 99.545s 
+[Epoch 115] Loss: 114.7000809 Forward: 20.538s Backward: 81.102s 
+[Epoch 116] Loss: 114.2260284 Forward: 19.472s Backward: 108.488s 
+[Epoch 117] Loss: 114.0900269 Forward: 21.264s Backward: 100.059s 
+[Epoch 118] Loss: 113.8757553 Forward: 20.596s Backward: 103.110s 
+[Epoch 119] Loss: 113.6651230 Forward: 21.434s Backward: 93.076s 
+[Epoch 120] Loss: 113.5876846 Forward: 20.030s Backward: 101.574s 
+[Epoch 121] Loss: 113.1890106 Forward: 20.716s Backward: 99.960s 
+[Epoch 122] Loss: 112.7871780 Forward: 20.490s Backward: 95.544s 
+[Epoch 123] Loss: 112.9212875 Forward: 20.582s Backward: 102.265s 
+[Epoch 124] Loss: 112.5722961 Forward: 21.568s Backward: 100.276s 
+[Epoch 125] Loss: 112.1498642 Forward: 19.726s Backward: 57.367s 
+[Epoch 126] Loss: 112.1457367 Forward: 21.098s Backward: 90.219s 
+[Epoch 127] Loss: 112.1325607 Forward: 19.760s Backward: 107.515s 
+[Epoch 128] Loss: 111.3947372 Forward: 20.325s Backward: 105.349s 
+[Epoch 129] Loss: 111.4759750 Forward: 20.734s Backward: 103.763s 
+[Epoch 130] Loss: 111.1369934 Forward: 20.720s Backward: 107.414s 
+[Epoch 131] Loss: 110.8259430 Forward: 21.369s Backward: 84.928s 
+[Epoch 132] Loss: 110.7192764 Forward: 20.222s Backward: 101.253s 
+[Epoch 133] Loss: 110.5039520 Forward: 20.351s Backward: 104.081s 
+[Epoch 134] Loss: 110.3809052 Forward: 20.500s Backward: 105.073s 
+[Epoch 135] Loss: 110.1802750 Forward: 22.027s Backward: 100.807s 
+[Epoch 136] Loss: 110.0706406 Forward: 21.669s Backward: 69.227s 
+[Epoch 137] Loss: 109.5750732 Forward: 20.576s Backward: 104.989s 
+[Epoch 138] Loss: 109.6360550 Forward: 21.370s Backward: 93.620s 
+[Epoch 139] Loss: 109.4106522 Forward: 19.844s Backward: 67.894s 
+[Epoch 140] Loss: 109.2812958 Forward: 21.187s Backward: 80.190s 
+[Epoch 141] Loss: 109.1972275 Forward: 20.133s Backward: 105.099s 
+[Epoch 142] Loss: 108.5663681 Forward: 22.198s Backward: 60.352s 
+[Epoch 143] Loss: 108.6685181 Forward: 20.249s Backward: 105.575s 
+[Epoch 144] Loss: 108.4266357 Forward: 20.032s Backward: 105.286s 
+[Epoch 145] Loss: 108.2242584 Forward: 20.606s Backward: 101.605s 
+[Epoch 146] Loss: 107.7727814 Forward: 20.499s Backward: 102.398s 
+[Epoch 147] Loss: 107.5475616 Forward: 20.599s Backward: 104.955s 
+[Epoch 148] Loss: 107.5389175 Forward: 20.232s Backward: 102.696s 
+[Epoch 149] Loss: 107.4143295 Forward: 19.727s Backward: 100.089s 
+[Epoch 150] Loss: 106.9334335 Forward: 20.002s Backward: 100.075s 
+embeddings: tensor([[ 2.5621e-01,  2.5011e-01,  2.4644e-01,  ...,  2.8072e-01,
+          2.5458e-01, -1.3794e-04],
+        [ 1.5909e-01,  1.5768e-01,  2.5571e-01,  ...,  1.7120e-01,
+          1.4501e-01, -7.7106e-05],
+        [ 2.5290e-01,  2.5191e-01,  2.3158e-01,  ...,  2.6808e-01,
+          2.4838e-01, -1.2341e-04],
+        ...,
+        [ 2.4816e-01,  2.3942e-01,  2.3050e-01,  ...,  2.5911e-01,
+          2.4914e-01, -1.6711e-04],
+        [ 2.5985e-01,  2.4881e-01,  2.4661e-01,  ...,  2.7698e-01,
+          2.5312e-01, -1.1943e-04],
+        [ 1.9935e-01,  2.0436e-01,  1.9355e-01,  ...,  2.2042e-01,
+          2.0059e-01, -1.0706e-04]])
+[Epoch 150]
+==================== Evaluation ====================
+F1: 0.07 	
+MAP: 0.0843 	
+MRR: 0.116 	
+MNDCG: 0.1334 	
+get best model!
+[Epoch 151] Loss: 106.7130051 Forward: 20.889s Backward: 102.295s 
+[Epoch 152] Loss: 107.0410309 Forward: 20.130s Backward: 80.070s 
+[Epoch 153] Loss: 106.5987244 Forward: 20.498s Backward: 105.504s 
+[Epoch 154] Loss: 106.4358368 Forward: 20.682s Backward: 102.915s 
+[Epoch 155] Loss: 106.0284195 Forward: 20.502s Backward: 102.569s 
+[Epoch 156] Loss: 105.9853592 Forward: 21.154s Backward: 108.095s 
+[Epoch 157] Loss: 105.9478531 Forward: 21.092s Backward: 103.214s 
+[Epoch 158] Loss: 105.6165237 Forward: 20.252s Backward: 103.349s 
+[Epoch 159] Loss: 105.4908218 Forward: 20.761s Backward: 104.017s 
+[Epoch 160] Loss: 105.3914032 Forward: 20.531s Backward: 101.863s 
+[Epoch 161] Loss: 104.9732819 Forward: 22.138s Backward: 106.042s 
+[Epoch 162] Loss: 105.3225479 Forward: 20.328s Backward: 75.406s 
+[Epoch 163] Loss: 104.4615860 Forward: 21.305s Backward: 61.560s 
+[Epoch 164] Loss: 104.4052658 Forward: 19.908s Backward: 101.033s 
+[Epoch 165] Loss: 104.0930023 Forward: 20.154s Backward: 63.446s 
+[Epoch 166] Loss: 104.0695724 Forward: 21.693s Backward: 100.197s 
+[Epoch 167] Loss: 103.9073639 Forward: 20.897s Backward: 103.081s 
+[Epoch 168] Loss: 103.6337585 Forward: 20.101s Backward: 103.416s 
+[Epoch 169] Loss: 103.8138199 Forward: 21.713s Backward: 108.485s 
+[Epoch 170] Loss: 103.5706177 Forward: 22.310s Backward: 98.491s 
+[Epoch 171] Loss: 102.8643036 Forward: 20.759s Backward: 99.529s 
+[Epoch 172] Loss: 103.1569214 Forward: 20.309s Backward: 55.468s 
+[Epoch 173] Loss: 102.8567200 Forward: 20.606s Backward: 107.904s 
+[Epoch 174] Loss: 102.6442566 Forward: 20.288s Backward: 91.845s 
+[Epoch 175] Loss: 102.5732346 Forward: 20.857s Backward: 102.724s 
+[Epoch 176] Loss: 102.3087463 Forward: 20.706s Backward: 101.676s 
+[Epoch 177] Loss: 102.7557449 Forward: 21.584s Backward: 82.034s 
+[Epoch 178] Loss: 101.7243652 Forward: 22.338s Backward: 100.563s 
+[Epoch 179] Loss: 101.6288452 Forward: 21.676s Backward: 77.503s 
+[Epoch 180] Loss: 101.9147949 Forward: 19.720s Backward: 98.290s 
+[Epoch 181] Loss: 101.9792786 Forward: 20.405s Backward: 83.201s 
+[Epoch 182] Loss: 101.4580765 Forward: 20.266s Backward: 103.534s 
+[Epoch 183] Loss: 101.8221283 Forward: 22.802s Backward: 99.407s 
+[Epoch 184] Loss: 101.0966263 Forward: 20.264s Backward: 107.003s 
+[Epoch 185] Loss: 101.0921631 Forward: 20.004s Backward: 105.542s 
+[Epoch 186] Loss: 101.1438065 Forward: 20.944s Backward: 102.221s 
+[Epoch 187] Loss: 100.8547287 Forward: 21.731s Backward: 102.491s 
+[Epoch 188] Loss: 101.2516174 Forward: 21.533s Backward: 99.277s 
+[Epoch 189] Loss: 100.6678772 Forward: 20.802s Backward: 96.102s 
+[Epoch 190] Loss: 100.3440628 Forward: 21.637s Backward: 99.647s 
+[Epoch 191] Loss: 100.4266052 Forward: 21.366s Backward: 104.235s 
+[Epoch 192] Loss: 100.0069427 Forward: 20.258s Backward: 96.235s 
+[Epoch 193] Loss: 99.8305893 Forward: 22.799s Backward: 104.062s 
+[Epoch 194] Loss: 99.4015198 Forward: 20.167s Backward: 54.274s 
+[Epoch 195] Loss: 99.4290009 Forward: 20.556s Backward: 104.327s 
+[Epoch 196] Loss: 99.2365952 Forward: 22.439s Backward: 105.582s 
+[Epoch 197] Loss: 99.3198242 Forward: 19.791s Backward: 105.703s 
+[Epoch 198] Loss: 99.0895615 Forward: 20.167s Backward: 103.351s 
+[Epoch 199] Loss: 99.1565628 Forward: 20.253s Backward: 104.742s 
+[Epoch 200] Loss: 98.4935303 Forward: 21.767s Backward: 87.996s 
+embeddings: tensor([[ 2.8892e-01,  2.9042e-01,  3.1372e-01,  ...,  3.5800e-01,
+          3.0146e-01, -1.3444e-04],
+        [ 1.7793e-01,  1.8374e-01,  3.1599e-01,  ...,  2.1719e-01,
+          1.6800e-01, -8.6814e-05],
+        [ 2.8800e-01,  2.9555e-01,  2.9142e-01,  ...,  3.4361e-01,
+          2.9690e-01, -1.2256e-04],
+        ...,
+        [ 2.8085e-01,  2.8204e-01,  2.9022e-01,  ...,  3.3239e-01,
+          2.9506e-01, -1.5959e-04],
+        [ 2.9216e-01,  2.8980e-01,  3.1373e-01,  ...,  3.5230e-01,
+          2.9915e-01, -1.1867e-04],
+        [ 2.3230e-01,  2.4754e-01,  2.3356e-01,  ...,  2.8239e-01,
+          2.4035e-01, -1.1103e-04]])
+[Epoch 200]
+==================== Evaluation ====================
+F1: 0.0696 	
+MAP: 0.0846 	
+MRR: 0.1151 	
+MNDCG: 0.133 	
+[Epoch 201] Loss: 99.0110168 Forward: 21.322s Backward: 111.618s 
+[Epoch 202] Loss: 98.5617599 Forward: 21.850s Backward: 67.069s 
+[Epoch 203] Loss: 98.1186981 Forward: 21.763s Backward: 101.326s 
+[Epoch 204] Loss: 98.7261200 Forward: 22.489s Backward: 102.184s 
+[Epoch 205] Loss: 98.1310196 Forward: 20.987s Backward: 103.819s 
+[Epoch 206] Loss: 98.3156891 Forward: 20.282s Backward: 101.925s 
+[Epoch 207] Loss: 98.3673096 Forward: 22.509s Backward: 101.775s 
+[Epoch 208] Loss: 97.8377838 Forward: 21.603s Backward: 104.308s 
+[Epoch 209] Loss: 97.6966782 Forward: 21.876s Backward: 99.514s 
+[Epoch 210] Loss: 97.2624054 Forward: 20.929s Backward: 101.842s 
+[Epoch 211] Loss: 97.6862030 Forward: 19.814s Backward: 103.717s 
+[Epoch 212] Loss: 97.2772217 Forward: 21.785s Backward: 95.009s 
+[Epoch 213] Loss: 97.1869202 Forward: 20.331s Backward: 103.093s 
+[Epoch 214] Loss: 97.0136490 Forward: 20.294s Backward: 104.802s 
+[Epoch 215] Loss: 96.7519226 Forward: 21.468s Backward: 101.580s 
+[Epoch 216] Loss: 96.9437637 Forward: 20.668s Backward: 107.383s 
+[Epoch 217] Loss: 96.8515778 Forward: 20.972s Backward: 103.418s 
+[Epoch 218] Loss: 96.6202927 Forward: 20.470s Backward: 97.421s 
+[Epoch 219] Loss: 96.3645020 Forward: 20.793s Backward: 102.494s 
+[Epoch 220] Loss: 96.5208206 Forward: 20.422s Backward: 100.354s 
+[Epoch 221] Loss: 96.1682205 Forward: 20.373s Backward: 88.073s 
+[Epoch 222] Loss: 96.0908813 Forward: 21.354s Backward: 96.352s 
+[Epoch 223] Loss: 96.0299988 Forward: 21.499s Backward: 104.693s 
+[Epoch 224] Loss: 96.3772888 Forward: 20.712s Backward: 104.982s 
+[Epoch 225] Loss: 95.9374771 Forward: 21.152s Backward: 103.421s 
+[Epoch 226] Loss: 96.0103836 Forward: 22.723s Backward: 109.121s 
+[Epoch 227] Loss: 95.6994629 Forward: 21.329s Backward: 104.670s 
+[Epoch 228] Loss: 95.5110321 Forward: 20.158s Backward: 101.874s 
+[Epoch 229] Loss: 95.6536179 Forward: 20.024s Backward: 82.957s 
+[Epoch 230] Loss: 95.5085373 Forward: 21.330s Backward: 97.874s 
+[Epoch 231] Loss: 95.6540833 Forward: 20.141s Backward: 107.798s 
+[Epoch 232] Loss: 94.3943405 Forward: 20.092s Backward: 100.987s 
+[Epoch 233] Loss: 94.7134094 Forward: 20.985s Backward: 104.122s 
+[Epoch 234] Loss: 94.5046997 Forward: 20.211s Backward: 105.852s 
+[Epoch 235] Loss: 94.9719391 Forward: 21.427s Backward: 93.016s 
+[Epoch 236] Loss: 94.3221970 Forward: 21.208s Backward: 103.669s 
+[Epoch 237] Loss: 94.2305374 Forward: 20.944s Backward: 85.443s 
+[Epoch 238] Loss: 94.2603836 Forward: 22.576s Backward: 105.323s 
+[Epoch 239] Loss: 94.4164276 Forward: 21.109s Backward: 105.783s 
+[Epoch 240] Loss: 93.5501633 Forward: 21.339s Backward: 87.905s 
+[Epoch 241] Loss: 93.4290771 Forward: 20.484s Backward: 89.676s 
+[Epoch 242] Loss: 93.9775391 Forward: 20.449s Backward: 101.858s 
+[Epoch 243] Loss: 94.3852158 Forward: 22.836s Backward: 93.264s 
+[Epoch 244] Loss: 93.6340942 Forward: 22.413s Backward: 91.678s 
+[Epoch 245] Loss: 94.0564117 Forward: 20.210s Backward: 84.304s 
+[Epoch 246] Loss: 93.0664291 Forward: 21.105s Backward: 101.903s 
+[Epoch 247] Loss: 92.9178391 Forward: 19.663s Backward: 82.522s 
+[Epoch 248] Loss: 93.1790237 Forward: 20.226s Backward: 84.864s 
+[Epoch 249] Loss: 93.3289871 Forward: 20.602s Backward: 102.840s 
+[Epoch 250] Loss: 93.3612289 Forward: 20.462s Backward: 103.318s 
+embeddings: tensor([[ 3.0275e-01,  3.1742e-01,  3.6916e-01,  ...,  4.1805e-01,
+          3.2081e-01, -1.3243e-04],
+        [ 1.8097e-01,  1.9825e-01,  3.6295e-01,  ...,  2.4976e-01,
+          1.6966e-01, -9.5404e-05],
+        [ 3.0149e-01,  3.2284e-01,  3.4091e-01,  ...,  4.0099e-01,
+          3.1585e-01, -1.2256e-04],
+        ...,
+        [ 2.9378e-01,  3.0966e-01,  3.3892e-01,  ...,  3.8904e-01,
+          3.1279e-01, -1.5341e-04],
+        [ 3.0525e-01,  3.1569e-01,  3.6910e-01,  ...,  4.0952e-01,
+          3.1836e-01, -1.1964e-04],
+        [ 2.4394e-01,  2.7347e-01,  2.6686e-01,  ...,  3.2819e-01,
+          2.5289e-01, -1.1441e-04]])
+[Epoch 250]
+==================== Evaluation ====================
+F1: 0.067 	
+MAP: 0.079 	
+MRR: 0.1106 	
+MNDCG: 0.1269 	
+[Epoch 251] Loss: 92.5681915 Forward: 21.535s Backward: 107.802s 
+[Epoch 252] Loss: 92.5372543 Forward: 21.052s Backward: 86.777s 
+[Epoch 253] Loss: 93.6228180 Forward: 21.601s Backward: 108.189s 
+[Epoch 254] Loss: 92.2040787 Forward: 21.594s Backward: 100.626s 
+[Epoch 255] Loss: 92.2355728 Forward: 20.699s Backward: 102.481s 
+[Epoch 256] Loss: 92.6424713 Forward: 20.489s Backward: 80.231s 
+[Epoch 257] Loss: 92.6592789 Forward: 19.989s Backward: 109.193s 
+[Epoch 258] Loss: 91.4773026 Forward: 19.826s Backward: 102.374s 
+[Epoch 259] Loss: 92.1723785 Forward: 20.456s Backward: 98.109s 
+[Epoch 260] Loss: 92.1956253 Forward: 19.894s Backward: 101.119s 
+[Epoch 261] Loss: 91.2969284 Forward: 20.395s Backward: 104.951s 
+[Epoch 262] Loss: 91.3513260 Forward: 20.167s Backward: 100.308s 
+[Epoch 263] Loss: 91.6267014 Forward: 21.374s Backward: 88.928s 
+[Epoch 264] Loss: 91.5281830 Forward: 20.927s Backward: 97.192s 
+[Epoch 265] Loss: 91.5366821 Forward: 20.735s Backward: 100.468s 
+[Epoch 266] Loss: 91.7191086 Forward: 20.538s Backward: 60.648s 
+[Epoch 267] Loss: 92.1232986 Forward: 20.197s Backward: 94.466s 
+[Epoch 268] Loss: 91.8197250 Forward: 20.199s Backward: 97.701s 
+[Epoch 269] Loss: 91.1968002 Forward: 21.259s Backward: 104.381s 
+[Epoch 270] Loss: 90.7256012 Forward: 20.981s Backward: 100.277s 
+[Epoch 271] Loss: 91.5253754 Forward: 19.843s Backward: 91.982s 
+[Epoch 272] Loss: 90.3599014 Forward: 20.714s Backward: 56.116s 
+[Epoch 273] Loss: 90.8764648 Forward: 20.925s Backward: 83.613s 
+[Epoch 274] Loss: 91.3910751 Forward: 20.524s Backward: 102.461s 
+[Epoch 275] Loss: 90.1293259 Forward: 20.541s Backward: 103.085s 
+[Epoch 276] Loss: 91.0980682 Forward: 21.624s Backward: 105.744s 
+[Epoch 277] Loss: 90.3049011 Forward: 20.340s Backward: 69.292s 
+[Epoch 278] Loss: 90.3610306 Forward: 20.128s Backward: 78.146s 
+[Epoch 279] Loss: 90.5431442 Forward: 20.311s Backward: 60.485s 
+[Epoch 280] Loss: 90.4398804 Forward: 20.377s Backward: 102.647s 
+[Epoch 281] Loss: 89.6354446 Forward: 20.581s Backward: 53.970s 
+[Epoch 282] Loss: 90.1105804 Forward: 20.615s Backward: 95.041s 
+[Epoch 283] Loss: 90.2252960 Forward: 22.893s Backward: 101.288s 
+[Epoch 284] Loss: 89.6989594 Forward: 21.788s Backward: 102.133s 
+[Epoch 285] Loss: 90.2536774 Forward: 21.281s Backward: 56.113s 
+[Epoch 286] Loss: 89.4078751 Forward: 20.216s Backward: 104.951s 
+[Epoch 287] Loss: 89.7386627 Forward: 20.780s Backward: 101.324s 
+[Epoch 288] Loss: 89.3313217 Forward: 19.646s Backward: 101.966s 
+[Epoch 289] Loss: 89.6386719 Forward: 21.122s Backward: 85.983s 
+[Epoch 290] Loss: 89.4346085 Forward: 21.800s Backward: 92.369s 
+[Epoch 291] Loss: 89.1881485 Forward: 20.556s Backward: 101.752s 
+[Epoch 292] Loss: 89.0025864 Forward: 20.287s Backward: 99.616s 
+[Epoch 293] Loss: 89.1814575 Forward: 19.921s Backward: 89.857s 
+[Epoch 294] Loss: 89.8631516 Forward: 21.633s Backward: 89.872s 
+[Epoch 295] Loss: 88.8364792 Forward: 20.850s Backward: 97.066s 
+[Epoch 296] Loss: 89.0629425 Forward: 22.258s Backward: 96.125s 
+[Epoch 297] Loss: 88.3817368 Forward: 19.969s Backward: 101.373s 
+[Epoch 298] Loss: 88.8392868 Forward: 20.206s Backward: 91.646s 
+[Epoch 299] Loss: 88.3633881 Forward: 21.222s Backward: 99.389s 
+[Epoch 300] Loss: 88.1838684 Forward: 21.640s Backward: 61.154s 
+embeddings: tensor([[ 3.0995e-01,  3.3618e-01,  4.0678e-01,  ...,  4.6037e-01,
+          3.2954e-01, -1.3092e-04],
+        [ 1.6898e-01,  1.9568e-01,  3.9202e-01,  ...,  2.6345e-01,
+          1.5538e-01, -1.0249e-04],
+        [ 3.0511e-01,  3.3863e-01,  3.7434e-01,  ...,  4.3910e-01,
+          3.2094e-01, -1.2285e-04],
+        ...,
+        [ 2.9754e-01,  3.2657e-01,  3.7160e-01,  ...,  4.2707e-01,
+          3.1731e-01, -1.4823e-04],
+        [ 3.1031e-01,  3.3076e-01,  4.0725e-01,  ...,  4.4835e-01,
+          3.2676e-01, -1.2112e-04],
+        [ 2.3865e-01,  2.8012e-01,  2.8850e-01,  ...,  3.5369e-01,
+          2.4707e-01, -1.1696e-04]])
+[Epoch 300]
+==================== Evaluation ====================
+F1: 0.0668 	
+MAP: 0.0775 	
+MRR: 0.1099 	
+MNDCG: 0.1256 	
+[Epoch 301] Loss: 88.2911301 Forward: 20.060s Backward: 99.210s 
+[Epoch 302] Loss: 88.7751923 Forward: 20.444s Backward: 66.047s 
+[Epoch 303] Loss: 88.3947220 Forward: 20.148s Backward: 95.862s 
+[Epoch 304] Loss: 87.8860016 Forward: 21.484s Backward: 101.944s 
+[Epoch 305] Loss: 88.5028076 Forward: 20.494s Backward: 103.781s 
+[Epoch 306] Loss: 87.8427429 Forward: 20.915s Backward: 102.980s 
+[Epoch 307] Loss: 87.9851151 Forward: 21.310s Backward: 103.883s 
+[Epoch 308] Loss: 87.4192886 Forward: 20.331s Backward: 55.274s 
+[Epoch 309] Loss: 88.3551025 Forward: 20.111s Backward: 74.882s 
+[Epoch 310] Loss: 87.3556747 Forward: 19.923s Backward: 55.167s 
+[Epoch 311] Loss: 87.8508682 Forward: 21.421s Backward: 98.416s 
+[Epoch 312] Loss: 87.5670166 Forward: 21.660s Backward: 58.249s 
+[Epoch 313] Loss: 87.2890930 Forward: 20.201s Backward: 97.489s 
+[Epoch 314] Loss: 87.1815186 Forward: 20.363s Backward: 96.318s 
+[Epoch 315] Loss: 88.2501984 Forward: 20.790s Backward: 60.020s 
+[Epoch 316] Loss: 86.5027847 Forward: 21.183s Backward: 62.026s 
+[Epoch 317] Loss: 87.2493210 Forward: 21.280s Backward: 60.686s 
+[Epoch 318] Loss: 86.6553345 Forward: 20.606s Backward: 56.129s 
+[Epoch 319] Loss: 87.3117981 Forward: 21.772s Backward: 63.689s 
+[Epoch 320] Loss: 86.4701233 Forward: 20.747s Backward: 101.502s 
+[Epoch 321] Loss: 86.4362030 Forward: 21.799s Backward: 95.797s 
+[Epoch 322] Loss: 87.0370712 Forward: 21.682s Backward: 95.303s 
+[Epoch 323] Loss: 86.6265793 Forward: 21.601s Backward: 57.264s 
+[Epoch 324] Loss: 86.8120575 Forward: 22.156s Backward: 108.100s 
+[Epoch 325] Loss: 86.0823212 Forward: 22.080s Backward: 54.206s 
+[Epoch 326] Loss: 86.2897034 Forward: 20.324s Backward: 54.541s 
+[Epoch 327] Loss: 86.7780991 Forward: 20.905s Backward: 56.838s 
+[Epoch 328] Loss: 86.0025024 Forward: 20.500s Backward: 104.382s 
+[Epoch 329] Loss: 86.5008926 Forward: 20.479s Backward: 83.101s 
+[Epoch 330] Loss: 86.2971039 Forward: 22.295s Backward: 103.335s 
+[Epoch 331] Loss: 86.2706375 Forward: 19.815s Backward: 108.495s 
+[Epoch 332] Loss: 85.9939804 Forward: 23.383s Backward: 103.494s 
+[Epoch 333] Loss: 86.7012100 Forward: 20.679s Backward: 92.526s 
+[Epoch 334] Loss: 86.0199280 Forward: 22.119s Backward: 75.452s 
+[Epoch 335] Loss: 86.1741257 Forward: 20.498s Backward: 106.723s 
+[Epoch 336] Loss: 86.1223068 Forward: 19.791s Backward: 71.597s 
+[Epoch 337] Loss: 86.0745163 Forward: 21.450s Backward: 79.769s 
+[Epoch 338] Loss: 85.4747467 Forward: 20.452s Backward: 54.053s 
+[Epoch 339] Loss: 85.2484741 Forward: 20.789s Backward: 105.926s 
+[Epoch 340] Loss: 85.2839890 Forward: 20.756s Backward: 99.638s 
+[Epoch 341] Loss: 85.3968353 Forward: 20.311s Backward: 93.989s 
+[Epoch 342] Loss: 84.5031662 Forward: 20.513s Backward: 102.083s 
+[Epoch 343] Loss: 84.4127502 Forward: 20.196s Backward: 102.773s 
+[Epoch 344] Loss: 85.8326187 Forward: 21.439s Backward: 102.574s 
+[Epoch 345] Loss: 84.7184372 Forward: 21.083s Backward: 104.414s 
+[Epoch 346] Loss: 84.7633820 Forward: 20.601s Backward: 103.504s 
+[Epoch 347] Loss: 84.5471497 Forward: 19.801s Backward: 107.982s 
+[Epoch 348] Loss: 85.2181244 Forward: 22.901s Backward: 105.339s 
+[Epoch 349] Loss: 85.2070465 Forward: 20.373s Backward: 106.683s 
+[Epoch 350] Loss: 84.7514191 Forward: 20.231s Backward: 102.160s 
+embeddings: tensor([[ 3.1248e-01,  3.4663e-01,  4.3254e-01,  ...,  4.8736e-01,
+          3.3147e-01, -1.2958e-04],
+        [ 1.4600e-01,  1.7805e-01,  4.0970e-01,  ...,  2.6094e-01,
+          1.2999e-01, -1.0817e-04],
+        [ 3.0273e-01,  3.4471e-01,  3.9739e-01,  ...,  4.6131e-01,
+          3.1793e-01, -1.2321e-04],
+        ...,
+        [ 2.9510e-01,  3.3346e-01,  3.9387e-01,  ...,  4.4895e-01,
+          3.1347e-01, -1.4385e-04],
+        [ 3.1079e-01,  3.3768e-01,  4.3380e-01,  ...,  4.7250e-01,
+          3.2823e-01, -1.2262e-04],
+        [ 2.2199e-01,  2.7122e-01,  3.0413e-01,  ...,  3.6149e-01,
+          2.2930e-01, -1.1877e-04]])
+[Epoch 350]
+==================== Evaluation ====================
+F1: 0.0674 	
+MAP: 0.0782 	
+MRR: 0.1109 	
+MNDCG: 0.1268 	
+[Epoch 351] Loss: 84.4922943 Forward: 20.452s Backward: 106.304s 
+[Epoch 352] Loss: 84.2873306 Forward: 21.821s Backward: 98.191s 
+[Epoch 353] Loss: 84.6832275 Forward: 20.445s Backward: 82.242s 
+[Epoch 354] Loss: 84.6987915 Forward: 20.623s Backward: 99.573s 
+[Epoch 355] Loss: 84.4146805 Forward: 21.456s Backward: 97.879s 
+[Epoch 356] Loss: 84.2442703 Forward: 22.113s Backward: 104.493s 
+[Epoch 357] Loss: 84.8285294 Forward: 21.480s Backward: 95.112s 
+[Epoch 358] Loss: 84.7841110 Forward: 21.980s Backward: 87.882s 
+[Epoch 359] Loss: 84.7018661 Forward: 21.308s Backward: 99.834s 
+[Epoch 360] Loss: 83.8319016 Forward: 21.200s Backward: 95.014s 
+[Epoch 361] Loss: 83.9071732 Forward: 21.861s Backward: 86.885s 
+[Epoch 362] Loss: 84.1982346 Forward: 21.588s Backward: 85.920s 
+[Epoch 363] Loss: 83.7966232 Forward: 22.437s Backward: 96.864s 
+[Epoch 364] Loss: 82.7899475 Forward: 21.650s Backward: 100.042s 
+[Epoch 365] Loss: 83.5303650 Forward: 21.253s Backward: 95.145s 
+[Epoch 366] Loss: 84.2945938 Forward: 21.317s Backward: 100.390s 
+[Epoch 367] Loss: 83.4162140 Forward: 21.553s Backward: 102.784s 
+[Epoch 368] Loss: 83.2733994 Forward: 19.962s Backward: 78.236s 
+[Epoch 369] Loss: 83.6453018 Forward: 20.402s Backward: 104.587s 
+[Epoch 370] Loss: 83.1131973 Forward: 20.193s Backward: 104.180s 
+[Epoch 371] Loss: 83.6705017 Forward: 19.746s Backward: 100.580s 
+[Epoch 372] Loss: 83.4017334 Forward: 19.729s Backward: 107.037s 
+[Epoch 373] Loss: 82.9854965 Forward: 20.427s Backward: 96.393s 
+[Epoch 374] Loss: 83.2302551 Forward: 20.535s Backward: 102.455s 
+[Epoch 375] Loss: 82.9309540 Forward: 20.159s Backward: 101.569s 
+[Epoch 376] Loss: 83.5557632 Forward: 21.296s Backward: 101.677s 
+[Epoch 377] Loss: 83.1353912 Forward: 21.847s Backward: 104.739s 
+[Epoch 378] Loss: 82.9865799 Forward: 20.363s Backward: 83.984s 
+[Epoch 379] Loss: 82.8681717 Forward: 20.398s Backward: 92.977s 
+[Epoch 380] Loss: 82.9552231 Forward: 20.439s Backward: 103.080s 
+[Epoch 381] Loss: 82.7621841 Forward: 20.203s Backward: 103.693s 
+[Epoch 382] Loss: 82.1727524 Forward: 20.394s Backward: 99.097s 
+[Epoch 383] Loss: 82.4678650 Forward: 20.514s Backward: 105.290s 
+[Epoch 384] Loss: 82.0950851 Forward: 22.224s Backward: 101.245s 
+[Epoch 385] Loss: 83.3824387 Forward: 21.315s Backward: 80.096s 
+[Epoch 386] Loss: 81.8078156 Forward: 20.389s Backward: 80.538s 
+[Epoch 387] Loss: 82.4933243 Forward: 21.464s Backward: 96.428s 
+[Epoch 388] Loss: 82.5005493 Forward: 19.726s Backward: 96.155s 
+[Epoch 389] Loss: 82.3184357 Forward: 20.526s Backward: 103.778s 
+[Epoch 390] Loss: 81.7003708 Forward: 20.583s Backward: 93.541s 
+[Epoch 391] Loss: 82.6891479 Forward: 20.196s Backward: 108.994s 
+[Epoch 392] Loss: 82.5121384 Forward: 20.105s Backward: 90.363s 
+[Epoch 393] Loss: 82.4574432 Forward: 20.846s Backward: 77.701s 
+[Epoch 394] Loss: 81.4720001 Forward: 20.565s Backward: 96.973s 
+[Epoch 395] Loss: 82.1135406 Forward: 20.610s Backward: 103.042s 
+[Epoch 396] Loss: 82.2613068 Forward: 20.996s Backward: 92.063s 
+[Epoch 397] Loss: 81.5053635 Forward: 19.931s Backward: 91.589s 
+[Epoch 398] Loss: 82.0161209 Forward: 21.311s Backward: 100.793s 
+[Epoch 399] Loss: 81.5446930 Forward: 20.501s Backward: 100.770s 
+[Epoch 400] Loss: 81.6369171 Forward: 21.808s Backward: 97.390s 
+embeddings: tensor([[ 3.1520e-01,  3.5425e-01,  4.4759e-01,  ...,  5.0463e-01,
+          3.3212e-01, -1.2834e-04],
+        [ 1.2257e-01,  1.5601e-01,  4.1895e-01,  ...,  2.4939e-01,
+          1.0393e-01, -1.1262e-04],
+        [ 3.0082e-01,  3.4793e-01,  4.1100e-01,  ...,  4.7418e-01,
+          3.1384e-01, -1.2355e-04],
+        ...,
+        [ 2.9268e-01,  3.3676e-01,  4.0685e-01,  ...,  4.6111e-01,
+          3.0873e-01, -1.4014e-04],
+        [ 3.1188e-01,  3.4268e-01,  4.4979e-01,  ...,  4.8784e-01,
+          3.2819e-01, -1.2391e-04],
+        [ 2.0492e-01,  2.5810e-01,  3.1416e-01,  ...,  3.5970e-01,
+          2.1033e-01, -1.1996e-04]])
+[Epoch 400]
+==================== Evaluation ====================
+F1: 0.0703 	
+MAP: 0.0827 	
+MRR: 0.1155 	
+MNDCG: 0.133 	
+[Epoch 401] Loss: 81.5185547 Forward: 20.349s Backward: 96.711s 
+[Epoch 402] Loss: 82.0243607 Forward: 20.419s Backward: 97.600s 
+[Epoch 403] Loss: 82.3285980 Forward: 20.077s Backward: 105.786s 
+[Epoch 404] Loss: 81.6278000 Forward: 20.245s Backward: 58.968s 
+[Epoch 405] Loss: 80.9612045 Forward: 20.039s Backward: 90.581s 
+[Epoch 406] Loss: 81.3254395 Forward: 21.696s Backward: 93.758s 
+[Epoch 407] Loss: 81.7429428 Forward: 19.920s Backward: 106.239s 
+[Epoch 408] Loss: 81.1044006 Forward: 20.393s Backward: 102.792s 
+[Epoch 409] Loss: 80.6911850 Forward: 22.617s Backward: 85.143s 
+[Epoch 410] Loss: 80.9659729 Forward: 22.003s Backward: 103.042s 
+[Epoch 411] Loss: 81.3719330 Forward: 21.143s Backward: 95.257s 
+[Epoch 412] Loss: 80.8731995 Forward: 23.166s Backward: 100.890s 
+[Epoch 413] Loss: 81.6679077 Forward: 20.563s Backward: 96.037s 
+[Epoch 414] Loss: 80.7521744 Forward: 21.744s Backward: 106.580s 
+[Epoch 415] Loss: 81.7952042 Forward: 20.120s Backward: 102.991s 
+[Epoch 416] Loss: 80.8649673 Forward: 21.191s Backward: 105.291s 
+[Epoch 417] Loss: 80.2007980 Forward: 20.578s Backward: 105.432s 
+[Epoch 418] Loss: 80.2369308 Forward: 20.996s Backward: 100.916s 
+[Epoch 419] Loss: 80.3995209 Forward: 20.556s Backward: 89.995s 
+[Epoch 420] Loss: 80.9378891 Forward: 21.062s Backward: 92.684s 
+[Epoch 421] Loss: 81.0944672 Forward: 21.481s Backward: 101.778s 
+[Epoch 422] Loss: 80.2739639 Forward: 20.120s Backward: 99.633s 
+[Epoch 423] Loss: 80.3053741 Forward: 21.194s Backward: 99.088s 
+[Epoch 424] Loss: 80.0111237 Forward: 20.718s Backward: 105.076s 
+[Epoch 425] Loss: 81.2308350 Forward: 20.797s Backward: 99.979s 
+[Epoch 426] Loss: 80.5600815 Forward: 20.360s Backward: 105.450s 
+[Epoch 427] Loss: 79.1616592 Forward: 20.517s Backward: 104.872s 
+[Epoch 428] Loss: 80.3711853 Forward: 20.844s Backward: 96.378s 
+[Epoch 429] Loss: 80.5250931 Forward: 20.467s Backward: 102.709s 
+[Epoch 430] Loss: 80.7205505 Forward: 21.432s Backward: 105.558s 
+[Epoch 431] Loss: 81.1450043 Forward: 20.298s Backward: 110.542s 
+[Epoch 432] Loss: 80.8675842 Forward: 19.723s Backward: 70.642s 
+[Epoch 433] Loss: 81.0842361 Forward: 20.637s Backward: 102.861s 
+[Epoch 434] Loss: 80.3731766 Forward: 19.960s Backward: 102.345s 
+[Epoch 435] Loss: 79.8231506 Forward: 20.401s Backward: 103.321s 
+[Epoch 436] Loss: 79.9412003 Forward: 20.386s Backward: 108.324s 
+[Epoch 437] Loss: 80.4807892 Forward: 21.468s Backward: 104.810s 
+[Epoch 438] Loss: 79.8317337 Forward: 20.136s Backward: 104.560s 
+[Epoch 439] Loss: 79.9459915 Forward: 20.238s Backward: 85.784s 
+[Epoch 440] Loss: 80.1092300 Forward: 20.150s Backward: 105.067s 
+[Epoch 441] Loss: 79.8568649 Forward: 21.185s Backward: 104.511s 
+[Epoch 442] Loss: 79.7481232 Forward: 19.684s Backward: 106.603s 
+[Epoch 443] Loss: 79.4643402 Forward: 20.217s Backward: 107.787s 
+[Epoch 444] Loss: 80.4288406 Forward: 20.267s Backward: 107.822s 
+[Epoch 445] Loss: 79.3085327 Forward: 20.013s Backward: 92.989s 
+[Epoch 446] Loss: 80.0837021 Forward: 20.386s Backward: 93.494s 
+[Epoch 447] Loss: 80.0421143 Forward: 21.412s Backward: 96.272s 
+[Epoch 448] Loss: 79.7602081 Forward: 20.430s Backward: 92.664s 
+[Epoch 449] Loss: 79.5640717 Forward: 21.646s Backward: 103.987s 
+[Epoch 450] Loss: 79.7429886 Forward: 22.818s Backward: 105.850s 
+embeddings: tensor([[ 3.1862e-01,  3.5927e-01,  4.5705e-01,  ...,  5.1613e-01,
+          3.3311e-01, -1.2715e-04],
+        [ 1.0390e-01,  1.3506e-01,  4.2530e-01,  ...,  2.3508e-01,
+          8.2519e-02, -1.1602e-04],
+        [ 3.0058e-01,  3.4927e-01,  4.1971e-01,  ...,  4.8194e-01,
+          3.1131e-01, -1.2377e-04],
+        ...,
+        [ 2.9217e-01,  3.3834e-01,  4.1520e-01,  ...,  4.6835e-01,
+          3.0568e-01, -1.3697e-04],
+        [ 3.1403e-01,  3.4572e-01,  4.6037e-01,  ...,  4.9771e-01,
+          3.2852e-01, -1.2489e-04],
+        [ 1.9180e-01,  2.4514e-01,  3.2265e-01,  ...,  3.5401e-01,
+          1.9515e-01, -1.2068e-04]])
+[Epoch 450]
+==================== Evaluation ====================
+F1: 0.0727 	
+MAP: 0.0844 	
+MRR: 0.1168 	
+MNDCG: 0.1359 	
+get best model!
+[Epoch 451] Loss: 79.8596268 Forward: 21.873s Backward: 55.915s 
+[Epoch 452] Loss: 80.1290207 Forward: 20.428s Backward: 84.475s 
+[Epoch 453] Loss: 79.5313110 Forward: 20.213s Backward: 74.013s 
+[Epoch 454] Loss: 79.9975357 Forward: 20.884s Backward: 57.608s 
+[Epoch 455] Loss: 79.9058914 Forward: 20.287s Backward: 80.209s 
+[Epoch 456] Loss: 78.8264465 Forward: 20.108s Backward: 108.874s 
+[Epoch 457] Loss: 79.2683640 Forward: 20.515s Backward: 99.393s 
+[Epoch 458] Loss: 78.8684998 Forward: 20.892s Backward: 104.282s 
+[Epoch 459] Loss: 79.3572998 Forward: 21.220s Backward: 104.007s 
+[Epoch 460] Loss: 79.2377930 Forward: 20.777s Backward: 104.111s 
+[Epoch 461] Loss: 79.5507965 Forward: 21.329s Backward: 58.270s 
+[Epoch 462] Loss: 79.2747040 Forward: 20.982s Backward: 106.120s 
+[Epoch 463] Loss: 79.1309662 Forward: 22.031s Backward: 100.252s 
+[Epoch 464] Loss: 78.7552185 Forward: 20.459s Backward: 104.173s 
+[Epoch 465] Loss: 79.8644180 Forward: 22.796s Backward: 55.410s 
+[Epoch 466] Loss: 79.5373001 Forward: 20.951s Backward: 110.305s 
+[Epoch 467] Loss: 79.6440735 Forward: 21.525s Backward: 99.398s 
+[Epoch 468] Loss: 78.8455887 Forward: 21.728s Backward: 103.142s 
+[Epoch 469] Loss: 79.0256729 Forward: 20.551s Backward: 96.566s 
+[Epoch 470] Loss: 78.9273758 Forward: 19.592s Backward: 106.941s 
+[Epoch 471] Loss: 79.0628510 Forward: 21.012s Backward: 106.667s 
+[Epoch 472] Loss: 78.5647583 Forward: 20.385s Backward: 103.892s 
+[Epoch 473] Loss: 79.9122467 Forward: 21.416s Backward: 97.499s 
+[Epoch 474] Loss: 78.4463272 Forward: 21.780s Backward: 103.108s 
+[Epoch 475] Loss: 78.9207840 Forward: 19.841s Backward: 80.649s 
+[Epoch 476] Loss: 78.4293060 Forward: 20.430s Backward: 101.803s 
+[Epoch 477] Loss: 79.5681915 Forward: 21.426s Backward: 101.856s 
+[Epoch 478] Loss: 78.8765411 Forward: 19.990s Backward: 100.521s 
+[Epoch 479] Loss: 79.5620575 Forward: 20.882s Backward: 94.421s 
+[Epoch 480] Loss: 77.9599457 Forward: 22.834s Backward: 91.635s 
+[Epoch 481] Loss: 78.0758896 Forward: 22.031s Backward: 90.512s 
+[Epoch 482] Loss: 79.2992935 Forward: 21.263s Backward: 77.622s 
+[Epoch 483] Loss: 78.5898743 Forward: 20.618s Backward: 92.901s 
+[Epoch 484] Loss: 78.5917511 Forward: 21.012s Backward: 101.568s 
+[Epoch 485] Loss: 78.7046738 Forward: 20.472s Backward: 89.506s 
+[Epoch 486] Loss: 78.6309967 Forward: 21.145s Backward: 102.957s 
+[Epoch 487] Loss: 78.2864227 Forward: 20.408s Backward: 103.424s 
+[Epoch 488] Loss: 78.7082214 Forward: 20.744s Backward: 66.644s 
+[Epoch 489] Loss: 78.1705856 Forward: 21.681s Backward: 105.907s 
+[Epoch 490] Loss: 78.5989609 Forward: 21.827s Backward: 98.498s 
+[Epoch 491] Loss: 78.3766174 Forward: 20.916s Backward: 106.934s 
+[Epoch 492] Loss: 78.1368484 Forward: 21.770s Backward: 95.589s 
+[Epoch 493] Loss: 78.7438583 Forward: 20.604s Backward: 102.468s 
+[Epoch 494] Loss: 78.6592865 Forward: 20.227s Backward: 103.439s 
+[Epoch 495] Loss: 78.6941071 Forward: 20.224s Backward: 105.410s 
+[Epoch 496] Loss: 78.7959442 Forward: 20.840s Backward: 103.677s 
+[Epoch 497] Loss: 78.7495804 Forward: 21.745s Backward: 102.860s 
+[Epoch 498] Loss: 78.7101669 Forward: 21.491s Backward: 98.408s 
+[Epoch 499] Loss: 78.0312500 Forward: 20.204s Backward: 88.780s 
+[Epoch 500] Loss: 77.6206741 Forward: 20.116s Backward: 82.079s 
+embeddings: tensor([[ 3.2095e-01,  3.6209e-01,  4.6346e-01,  ...,  5.2180e-01,
+          3.3205e-01, -1.2601e-04],
+        [ 8.9848e-02,  1.1788e-01,  4.2941e-01,  ...,  2.1983e-01,
+          6.4479e-02, -1.1850e-04],
+        [ 3.0051e-01,  3.4962e-01,  4.2534e-01,  ...,  4.8516e-01,
+          3.0804e-01, -1.2385e-04],
+        ...,
+        [ 2.9199e-01,  3.3881e-01,  4.2101e-01,  ...,  4.7106e-01,
+          3.0229e-01, -1.3424e-04],
+        [ 3.1529e-01,  3.4671e-01,  4.6796e-01,  ...,  5.0213e-01,
+          3.2713e-01, -1.2551e-04],
+        [ 1.8222e-01,  2.3439e-01,  3.2998e-01,  ...,  3.4612e-01,
+          1.8274e-01, -1.2103e-04]])
+[Epoch 500]
+==================== Evaluation ====================
+F1: 0.0732 	
+MAP: 0.0837 	
+MRR: 0.1159 	
+MNDCG: 0.1356 	
+Training is complete!
+Starting final evaluation...
+==================== Final Evaluation ====================
+[Final Scores] Total Epoch 500 	 Best Epoch 450
+F1: 0.0727 	
+MAP: 0.0844 	
+MRR: 0.1168 	
+MNDCG: 0.1359 	

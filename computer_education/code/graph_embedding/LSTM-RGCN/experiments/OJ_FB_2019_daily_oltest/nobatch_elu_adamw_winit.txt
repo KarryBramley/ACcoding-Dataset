@@ -1,0 +1,34 @@
+configs: {'log_file': 'nobatch_elu_adamw_winit', 'name': 'OJ_FB_2019daily_oltest', 'save_dir': '2019daily_running'} {'epochs': 50, 'graph_batch_size': 30000, 'negative_sampling': {'head_prob': 0.5, 'sampling_rate': 10}, 'optimiser': {'algorithm': 'adamw', 'learn_rate': 0.001, 'weight_decay': 0.01}, 'sampling_method': 'edge-neighborhood', 'use_cuda': True, 'use_time': True, 'use_weight': False} {'activation': 'elu', 'bias_init': 'zeros', 'edge_dropout': {'general': 0.3, 'self_loop': 0, 'self_loop_type': 'schlichtkrull-dropout'}, 'hidden1_size': 200, 'hidden2_size': 200, 'include_gain': False, 'lstm_weight_init': 'xavier-normal', 'model': 'rgcn', 'node_embedding': 200, 'num_layers': 2, 'rgcn_weight_init': 'schlichtkrull-normal'} {'include_gain': False, 'l2_penalty': 1, 'l2_penalty_type': 'schlichtkrull-l2', 'loss_expand': 100, 'model': 'distmult', 'weight_init': 'standard-normal'} {'check_every': 10, 'filtered': True, 'use_valid': False, 'verbose': True}
+num_nodes = 5169 num_relations = 11
+[Epoch 1] Loss: 127.0681992 Forward: 21.050s Backward: 21.104s 
+[Epoch 2] Loss: 127.0633621 Forward: 21.182s Backward: 18.510s 
+[Epoch 3] Loss: 127.0593033 Forward: 22.172s Backward: 17.536s 
+[Epoch 4] Loss: 127.0545807 Forward: 22.983s Backward: 16.720s 
+[Epoch 5] Loss: 127.0509033 Forward: 22.610s Backward: 17.556s 
+[Epoch 6] Loss: 127.0478363 Forward: 24.148s Backward: 17.478s 
+[Epoch 7] Loss: 127.0418549 Forward: 24.689s Backward: 16.382s 
+[Epoch 8] Loss: 127.0372238 Forward: 24.345s Backward: 17.582s 
+[Epoch 9] Loss: 127.0328827 Forward: 24.912s Backward: 16.303s 
+[Epoch 10] Loss: 127.0278549 Forward: 24.500s Backward: 17.483s 
+embeddings: tensor([[ 0.0191, -0.0015,  0.0117,  ...,  0.0148, -0.0163,  0.0007],
+        [ 0.0035,  0.0234,  0.0129,  ...,  0.0021, -0.0163,  0.0172],
+        [-0.0018, -0.0133,  0.0082,  ...,  0.0126, -0.0124,  0.0176],
+        ...,
+        [ 0.0110, -0.0076,  0.0129,  ...,  0.0106, -0.0061,  0.0070],
+        [ 0.0082, -0.0154,  0.0111,  ...,  0.0210, -0.0200,  0.0017],
+        [ 0.0109, -0.0176,  0.0091,  ...,  0.0154,  0.0009, -0.0160]])
+[Epoch 10]
+==================== Evaluation ====================
+F1: 0.0065 	
+MAP: 0.0019 	
+MRR: 0.0191 	
+MNDCG: 0.0066 	
+[Epoch 11] Loss: 127.0203247 Forward: 23.170s Backward: 16.017s 
+[Epoch 12] Loss: 127.0179062 Forward: 25.746s Backward: 18.641s 
+[Epoch 13] Loss: 127.0109787 Forward: 24.139s Backward: 17.879s 
+[Epoch 14] Loss: 127.0031662 Forward: 25.371s Backward: 17.816s 
+[Epoch 15] Loss: 126.9961090 Forward: 24.125s Backward: 18.765s 
+[Epoch 16] Loss: 126.9890900 Forward: 24.941s Backward: 18.470s 
+[Epoch 17] Loss: 126.9823837 Forward: 24.202s Backward: 16.773s 
+[Epoch 18] Loss: 126.9738007 Forward: 23.842s Backward: 15.871s 
+[Epoch 19] Loss: 126.9646225 Forward: 24.630s Backward: 15.557s 

@@ -1,0 +1,16 @@
+{
+  "exp_name": "daily_2019_mini",
+  "use_mini": true,
+  "emb_dim": 32,
+  "n_factors": 6,
+  "distortion": 0.75,
+  "n_samples": 10,
+  "hidden_units": [16],
+  "lr": 0.001,
+  "n_epochs": 100,
+  "batch_size": 128,
+  "summary_every": 100,
+  "n_loader_workers": 0,
+  "save_every": 10,
+  "top_n": 20
+}

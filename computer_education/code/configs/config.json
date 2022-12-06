@@ -1,0 +1,80 @@
+{
+  "dkt":
+  {
+    "model_name": "oj_model",
+    "f": "data/experiment_data/DKT/oj/contestData2019_problems.csv",
+    "v": 1,
+    "w": "knowledge_tracing/DKT/oj_model/weights/bestmodel",
+    "log_dir": "knowledge_tracing/DKT/oj_model/logs",
+    "dropout_rate": 0.3,
+    "hidden_units": 100,
+    "batch_size": 32,
+    "epochs": 50,
+    "test_split": 0.2,
+    "val_split": 0.2,
+    "use_kp": false
+  },
+  "dkvmn":
+  {
+    "gpu": -1,
+    "max_iter": 100,
+    "decay_epoch": 20,
+    "test": false,
+    "train_test": true,
+    "show": true,
+    "init_std": 0.1,
+    "init_lr": 0.01,
+    "lr_decay": 0.75,
+    "final_lr": 1E-5,
+    "momentum": 0.9,
+    "maxgradnorm": 50.0,
+    "final_fc_dim": 50,
+
+    "batch_size": 32,
+    "q_embed_dim": 50,
+    "qa_embed_dim": 100,
+    "memory_size": 50,
+    "n_question": 761,
+    "seqlen": 200,
+    "data_dir": "data/experiment_data/DKVMN/oj",
+    "data_name": "daily2019_bf4",
+    "load": "daily2019_bf4",
+    "save": "daily2019_bf4.pkl"
+  },
+  "ige":
+  {
+    "config": null,
+    "test": null
+  },
+  "bine":
+  {
+    "train_data": "rating_train.dat",
+    "test_data": "rating_test.dat",
+    "model_name": "oj_model",
+    "vectors_u": "vectors_u.dat",
+    "vectors_v": "vectors_v.dat",
+    "ws": 5,
+    "ns": 4,
+    "d": 128,
+    "maxT": 32,
+    "minT": 1,
+    "p": 0.15,
+    "alpha": 0.01,
+    "beta": 0.01,
+    "gamma": 0.1,
+    "lam": 0.01,
+    "max_iter": 50,
+    "top_n": 10,
+    "rec": 1,
+    "large": 0,
+    "mode": "hits",
+    "use_daily": true
+  },
+  "rhine":
+  {
+    "data_set": "daily_2019_valid",
+    "mode": "up+pk+upk"
+  },
+  "transx":
+  {}
+}

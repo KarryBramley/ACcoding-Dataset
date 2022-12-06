@@ -1,0 +1,985 @@
+configs: {'log_file': 'log_lrelu_test_expand', 'name': 'OJ_FB_mini', 'save_dir': 'running'} {'epochs': 500, 'graph_batch_size': 1024, 'negative_sampling': {'head_prob': 0.5, 'sampling_rate': 10}, 'optimiser': {'algorithm': 'adam', 'learn_rate': 0.001, 'weight_decay': 0.0001}, 'sampling_method': 'edge-neighborhood', 'use_cuda': True, 'use_time': True, 'use_weight': False} {'activation': 'lrelu', 'bias_init': 'zeros', 'edge_dropout': {'general': 0.3, 'self_loop': 0.2, 'self_loop_type': 'schlichtkrull-dropout'}, 'hidden1_size': 200, 'hidden2_size': 200, 'include_gain': False, 'lstm_weight_init': 'xavier-normal', 'model': 'rgcn', 'node_embedding': 200, 'num_layers': 2, 'rgcn_weight_init': 'schlichtkrull-normal'} {'include_gain': False, 'l2_penalty': 1000, 'l2_penalty_type': 'schlichtkrull-l2', 'loss_expand': 100, 'model': 'dotmult', 'weight_init': 'standard-normal'} {'batch_size': 512, 'check_every': 20, 'filtered': True, 'use_valid': False, 'verbose': True}
+num_nodes = 588 num_relations = 9
+[Epoch 1] Loss: 69.7136993 Forward: 3.390s Backward: 1.840s 
+[Epoch 2] Loss: 69.6411896 Forward: 7.196s Backward: 1.964s 
+[Epoch 3] Loss: 69.5869980 Forward: 2.442s Backward: 1.499s 
+[Epoch 4] Loss: 69.5010757 Forward: 2.656s Backward: 1.410s 
+[Epoch 5] Loss: 69.4701309 Forward: 6.427s Backward: 1.564s 
+[Epoch 6] Loss: 69.4391556 Forward: 6.506s Backward: 1.528s 
+[Epoch 7] Loss: 69.4074402 Forward: 4.415s Backward: 1.395s 
+[Epoch 8] Loss: 69.3979797 Forward: 2.203s Backward: 1.477s 
+[Epoch 9] Loss: 69.3663025 Forward: 2.594s Backward: 1.394s 
+[Epoch 10] Loss: 69.3610840 Forward: 3.235s Backward: 1.498s 
+[Epoch 11] Loss: 69.3460236 Forward: 2.913s Backward: 1.491s 
+[Epoch 12] Loss: 69.3437271 Forward: 6.480s Backward: 1.474s 
+[Epoch 13] Loss: 69.3463440 Forward: 6.452s Backward: 1.395s 
+[Epoch 14] Loss: 69.3385696 Forward: 2.752s Backward: 1.337s 
+[Epoch 15] Loss: 69.3330154 Forward: 2.897s Backward: 1.388s 
+[Epoch 16] Loss: 69.3292160 Forward: 2.633s Backward: 2.098s 
+[Epoch 17] Loss: 69.3254547 Forward: 2.776s Backward: 2.083s 
+[Epoch 18] Loss: 69.3228912 Forward: 2.888s Backward: 2.134s 
+[Epoch 19] Loss: 69.3204346 Forward: 2.287s Backward: 2.426s 
+[Epoch 20] Loss: 69.3227234 Forward: 2.762s Backward: 2.730s 
+embeddings: tensor([[-2.9763e-04, -3.7449e-04, -1.8931e-04,  ..., -2.8050e-04,
+         -4.5739e-04,  6.7206e-03],
+        [-5.9281e-04, -2.0664e-04,  7.7703e-03,  ..., -1.6286e-04,
+         -3.7062e-05,  7.2139e-03],
+        [-4.4994e-04, -4.6027e-05, -1.9271e-04,  ..., -3.4310e-04,
+         -3.8555e-04, -2.9618e-04],
+        ...,
+        [-1.7957e-04, -1.5248e-04, -1.5363e-04,  ..., -2.9723e-04,
+         -2.8588e-04, -3.5679e-04],
+        [-2.9558e-04, -2.1665e-04, -1.9538e-04,  ..., -1.2579e-04,
+         -2.7807e-04, -2.1894e-04],
+        [-1.6640e-04, -1.3991e-04, -2.2110e-04,  ..., -1.9245e-04,
+         -1.5162e-04, -3.1904e-04]])
+[Epoch 20]
+==================== Evaluation ====================
+F1: 0.1548 	
+MAP: 0.1492 	
+MRR: 0.2002 	
+MNDCG: 0.253 	
+[Epoch 21] Loss: 69.3242874 Forward: 3.284s Backward: 2.522s 
+[Epoch 22] Loss: 69.3200302 Forward: 2.986s Backward: 2.611s 
+[Epoch 23] Loss: 69.3199158 Forward: 3.128s Backward: 2.550s 
+[Epoch 24] Loss: 69.3219376 Forward: 3.250s Backward: 2.583s 
+[Epoch 25] Loss: 69.3183823 Forward: 3.662s Backward: 2.600s 
+[Epoch 26] Loss: 69.3187408 Forward: 3.000s Backward: 1.550s 
+[Epoch 27] Loss: 69.3190155 Forward: 1.964s Backward: 1.723s 
+[Epoch 28] Loss: 69.3195038 Forward: 1.705s Backward: 1.679s 
+[Epoch 29] Loss: 69.3210220 Forward: 1.519s Backward: 1.680s 
+[Epoch 30] Loss: 69.3190308 Forward: 1.425s Backward: 0.652s 
+[Epoch 31] Loss: 69.3191528 Forward: 0.913s Backward: 0.630s 
+[Epoch 32] Loss: 69.3189621 Forward: 0.910s Backward: 0.657s 
+[Epoch 33] Loss: 69.3169022 Forward: 0.834s Backward: 0.686s 
+[Epoch 34] Loss: 69.3180161 Forward: 0.906s Backward: 0.563s 
+[Epoch 35] Loss: 69.3178711 Forward: 0.910s Backward: 0.587s 
+[Epoch 36] Loss: 69.3165741 Forward: 0.955s Backward: 0.483s 
+[Epoch 37] Loss: 69.3188705 Forward: 0.997s Backward: 0.674s 
+[Epoch 38] Loss: 69.3183594 Forward: 1.892s Backward: 1.012s 
+[Epoch 39] Loss: 69.3174438 Forward: 1.901s Backward: 0.923s 
+[Epoch 40] Loss: 69.3170395 Forward: 1.909s Backward: 1.560s 
+embeddings: tensor([[-3.5653e-04, -4.3515e-04, -2.3757e-04,  ..., -3.3941e-04,
+         -4.8303e-04,  3.1298e-03],
+        [-6.3934e-04, -2.7333e-04,  1.9946e-03,  ..., -2.1959e-04,
+         -8.1584e-05,  3.3160e-03],
+        [-5.0627e-04, -1.1609e-04, -2.4159e-04,  ..., -4.0182e-04,
+         -4.1531e-04, -3.1352e-04],
+        ...,
+        [-2.4177e-04, -2.3154e-04, -2.0356e-04,  ..., -3.5836e-04,
+         -3.1883e-04, -3.7945e-04],
+        [-3.3731e-04, -2.7946e-04, -2.2553e-04,  ..., -1.6862e-04,
+         -3.0484e-04, -2.3329e-04],
+        [-2.1903e-04, -2.0707e-04, -2.4833e-04,  ..., -2.4318e-04,
+         -1.7868e-04, -3.2799e-04]])
+[Epoch 40]
+==================== Evaluation ====================
+F1: 0.172 	
+MAP: 0.1869 	
+MRR: 0.2589 	
+MNDCG: 0.2954 	
+[Epoch 41] Loss: 69.3167496 Forward: 1.358s Backward: 1.802s 
+[Epoch 42] Loss: 69.3164291 Forward: 1.003s Backward: 0.538s 
+[Epoch 43] Loss: 69.3160400 Forward: 0.879s Backward: 1.015s 
+[Epoch 44] Loss: 69.3160629 Forward: 3.504s Backward: 1.466s 
+[Epoch 45] Loss: 69.3159866 Forward: 4.017s Backward: 1.397s 
+[Epoch 46] Loss: 69.3189392 Forward: 3.889s Backward: 1.509s 
+[Epoch 47] Loss: 69.3174515 Forward: 3.719s Backward: 1.507s 
+[Epoch 48] Loss: 69.3161316 Forward: 3.264s Backward: 1.316s 
+[Epoch 49] Loss: 69.3159943 Forward: 3.385s Backward: 1.598s 
+[Epoch 50] Loss: 69.3171310 Forward: 5.507s Backward: 1.712s 
+[Epoch 51] Loss: 69.3168869 Forward: 7.996s Backward: 1.888s 
+[Epoch 52] Loss: 69.3160095 Forward: 4.376s Backward: 2.103s 
+[Epoch 53] Loss: 69.3161392 Forward: 4.035s Backward: 1.776s 
+[Epoch 54] Loss: 69.3168259 Forward: 4.600s Backward: 1.919s 
+[Epoch 55] Loss: 69.3168488 Forward: 4.699s Backward: 1.997s 
+[Epoch 56] Loss: 69.3157196 Forward: 3.707s Backward: 1.865s 
+[Epoch 57] Loss: 69.3171310 Forward: 4.651s Backward: 2.001s 
+[Epoch 58] Loss: 69.3167114 Forward: 4.881s Backward: 2.178s 
+[Epoch 59] Loss: 69.3163071 Forward: 4.620s Backward: 2.196s 
+[Epoch 60] Loss: 69.3166962 Forward: 4.618s Backward: 2.302s 
+embeddings: tensor([[-3.6018e-04, -4.4213e-04, -2.4514e-04,  ..., -3.5179e-04,
+         -4.7002e-04,  2.6314e-03],
+        [-6.3054e-04, -2.8641e-04,  3.1569e-04,  ..., -2.3080e-04,
+         -8.6488e-05,  2.4029e-03],
+        [-5.0779e-04, -1.3428e-04, -2.4994e-04,  ..., -4.1436e-04,
+         -4.0581e-04, -3.0010e-04],
+        ...,
+        [-2.5230e-04, -2.5567e-04, -2.1185e-04,  ..., -3.6849e-04,
+         -3.0998e-04, -3.7194e-04],
+        [-3.3438e-04, -2.9190e-04, -2.2411e-04,  ..., -1.6752e-04,
+         -2.9214e-04, -2.2426e-04],
+        [-2.2242e-04, -2.2171e-04, -2.4306e-04,  ..., -2.4896e-04,
+         -1.7335e-04, -3.1561e-04]])
+[Epoch 60]
+==================== Evaluation ====================
+F1: 0.1535 	
+MAP: 0.1777 	
+MRR: 0.2448 	
+MNDCG: 0.2743 	
+[Epoch 61] Loss: 69.3160934 Forward: 4.464s Backward: 2.128s 
+[Epoch 62] Loss: 69.3174438 Forward: 3.882s Backward: 2.091s 
+[Epoch 63] Loss: 69.3165512 Forward: 4.234s Backward: 2.078s 
+[Epoch 64] Loss: 69.3163910 Forward: 4.414s Backward: 2.167s 
+[Epoch 65] Loss: 69.3164062 Forward: 3.500s Backward: 1.720s 
+[Epoch 66] Loss: 69.3160248 Forward: 6.409s Backward: 2.099s 
+[Epoch 67] Loss: 69.3163147 Forward: 4.500s Backward: 2.082s 
+[Epoch 68] Loss: 69.3162003 Forward: 4.805s Backward: 2.072s 
+[Epoch 69] Loss: 69.3163834 Forward: 4.328s Backward: 1.979s 
+[Epoch 70] Loss: 69.3159943 Forward: 3.539s Backward: 1.453s 
+[Epoch 71] Loss: 69.3164444 Forward: 3.910s Backward: 1.426s 
+[Epoch 72] Loss: 69.3158112 Forward: 2.108s Backward: 0.576s 
+[Epoch 73] Loss: 69.3161240 Forward: 0.883s Backward: 0.638s 
+[Epoch 74] Loss: 69.3164978 Forward: 0.880s Backward: 0.635s 
+[Epoch 75] Loss: 69.3162003 Forward: 0.883s Backward: 0.717s 
+[Epoch 76] Loss: 69.3157425 Forward: 0.853s Backward: 0.524s 
+[Epoch 77] Loss: 69.3158798 Forward: 0.924s Backward: 0.780s 
+[Epoch 78] Loss: 69.3161240 Forward: 0.890s Backward: 1.468s 
+[Epoch 79] Loss: 69.3165283 Forward: 1.915s Backward: 1.790s 
+[Epoch 80] Loss: 69.3160629 Forward: 2.232s Backward: 1.407s 
+embeddings: tensor([[-3.5745e-04, -4.3742e-04, -2.4585e-04,  ..., -3.5450e-04,
+         -4.5265e-04,  2.6908e-03],
+        [-6.1431e-04, -2.8794e-04, -6.7136e-06,  ..., -2.3267e-04,
+         -8.7436e-05,  2.1109e-03],
+        [-5.0171e-04, -1.4122e-04, -2.5168e-04,  ..., -4.1709e-04,
+         -3.9161e-04, -2.8133e-04],
+        ...,
+        [-2.6208e-04, -2.6746e-04, -2.1252e-04,  ..., -3.6802e-04,
+         -2.9669e-04, -3.5675e-04],
+        [-3.3167e-04, -2.9367e-04, -2.2008e-04,  ..., -1.6107e-04,
+         -2.7799e-04, -2.1061e-04],
+        [-2.2047e-04, -2.2564e-04, -2.3457e-04,  ..., -2.4881e-04,
+         -1.6590e-04, -2.9984e-04]])
+[Epoch 80]
+==================== Evaluation ====================
+F1: 0.1477 	
+MAP: 0.1715 	
+MRR: 0.2285 	
+MNDCG: 0.2638 	
+[Epoch 81] Loss: 69.3161011 Forward: 1.641s Backward: 0.710s 
+[Epoch 82] Loss: 69.3157654 Forward: 0.939s Backward: 1.012s 
+[Epoch 83] Loss: 69.3162842 Forward: 1.994s Backward: 2.753s 
+[Epoch 84] Loss: 69.3157730 Forward: 1.489s Backward: 2.640s 
+[Epoch 85] Loss: 69.3155518 Forward: 1.317s Backward: 2.350s 
+[Epoch 86] Loss: 69.3157349 Forward: 1.404s Backward: 2.425s 
+[Epoch 87] Loss: 69.3156815 Forward: 1.679s Backward: 2.032s 
+[Epoch 88] Loss: 69.3163071 Forward: 2.895s Backward: 2.492s 
+[Epoch 89] Loss: 69.3160095 Forward: 2.825s Backward: 2.846s 
+[Epoch 90] Loss: 69.3155060 Forward: 2.836s Backward: 2.766s 
+[Epoch 91] Loss: 69.3161240 Forward: 2.531s Backward: 2.720s 
+[Epoch 92] Loss: 69.3155823 Forward: 2.389s Backward: 2.494s 
+[Epoch 93] Loss: 69.3156662 Forward: 2.911s Backward: 1.964s 
+[Epoch 94] Loss: 69.3154755 Forward: 2.944s Backward: 2.051s 
+[Epoch 95] Loss: 69.3155289 Forward: 2.820s Backward: 2.009s 
+[Epoch 96] Loss: 69.3163147 Forward: 3.090s Backward: 2.280s 
+[Epoch 97] Loss: 69.3155365 Forward: 2.898s Backward: 1.949s 
+[Epoch 98] Loss: 69.3158112 Forward: 3.093s Backward: 2.275s 
+[Epoch 99] Loss: 69.3154678 Forward: 2.930s Backward: 2.056s 
+[Epoch 100] Loss: 69.3163376 Forward: 3.132s Backward: 2.184s 
+embeddings: tensor([[-3.4945e-04, -4.2872e-04, -2.4367e-04,  ..., -3.5298e-04,
+         -4.3421e-04,  2.8627e-03],
+        [-5.9342e-04, -2.8529e-04, -1.3612e-05,  ..., -2.3030e-04,
+         -8.7377e-05,  1.9542e-03],
+        [-4.8983e-04, -1.4456e-04, -2.5062e-04,  ..., -4.1529e-04,
+         -3.7559e-04, -2.6164e-04],
+        ...,
+        [-2.6522e-04, -2.7533e-04, -2.1032e-04,  ..., -3.6316e-04,
+         -2.8253e-04, -3.3995e-04],
+        [-3.2611e-04, -2.9342e-04, -2.1579e-04,  ..., -1.5347e-04,
+         -2.6527e-04, -1.9766e-04],
+        [-2.1550e-04, -2.2706e-04, -2.2677e-04,  ..., -2.4443e-04,
+         -1.5799e-04, -2.8409e-04]])
+[Epoch 100]
+==================== Evaluation ====================
+F1: 0.1528 	
+MAP: 0.1872 	
+MRR: 0.2469 	
+MNDCG: 0.2795 	
+[Epoch 101] Loss: 69.3159790 Forward: 2.154s Backward: 2.987s 
+[Epoch 102] Loss: 69.3157578 Forward: 2.217s Backward: 2.645s 
+[Epoch 103] Loss: 69.3159637 Forward: 2.328s Backward: 2.908s 
+[Epoch 104] Loss: 69.3163605 Forward: 2.064s Backward: 2.811s 
+[Epoch 105] Loss: 69.3154755 Forward: 2.203s Backward: 2.620s 
+[Epoch 106] Loss: 69.3154831 Forward: 2.373s Backward: 2.536s 
+[Epoch 107] Loss: 69.3156128 Forward: 4.278s Backward: 2.501s 
+[Epoch 108] Loss: 69.3160172 Forward: 2.014s Backward: 1.893s 
+[Epoch 109] Loss: 69.3159790 Forward: 1.922s Backward: 2.795s 
+[Epoch 110] Loss: 69.3156891 Forward: 2.449s Backward: 2.121s 
+[Epoch 111] Loss: 69.3157730 Forward: 2.079s Backward: 2.140s 
+[Epoch 112] Loss: 69.3160095 Forward: 1.870s Backward: 2.216s 
+[Epoch 113] Loss: 69.3154068 Forward: 2.016s Backward: 2.183s 
+[Epoch 114] Loss: 69.3159637 Forward: 2.100s Backward: 2.010s 
+[Epoch 115] Loss: 69.3156891 Forward: 2.095s Backward: 3.000s 
+[Epoch 116] Loss: 69.3157425 Forward: 2.201s Backward: 3.069s 
+[Epoch 117] Loss: 69.3159409 Forward: 2.239s Backward: 2.657s 
+[Epoch 118] Loss: 69.3154297 Forward: 2.255s Backward: 2.790s 
+[Epoch 119] Loss: 69.3155670 Forward: 2.154s Backward: 3.429s 
+[Epoch 120] Loss: 69.3153763 Forward: 2.296s Backward: 3.014s 
+embeddings: tensor([[-3.4626e-04, -4.1807e-04, -2.3856e-04,  ..., -3.5153e-04,
+         -4.1786e-04,  2.8609e-03],
+        [-5.8037e-04, -2.8048e-04, -1.7625e-05,  ..., -2.2840e-04,
+         -8.9324e-05,  1.6859e-03],
+        [-4.8130e-04, -1.4603e-04, -2.4628e-04,  ..., -4.1313e-04,
+         -3.6202e-04, -2.4419e-04],
+        ...,
+        [-2.6442e-04, -2.8157e-04, -2.0522e-04,  ..., -3.5802e-04,
+         -2.7060e-04, -3.2360e-04],
+        [-3.2051e-04, -2.9214e-04, -2.1056e-04,  ..., -1.4748e-04,
+         -2.5629e-04, -1.8684e-04],
+        [-2.1484e-04, -2.2670e-04, -2.1852e-04,  ..., -2.4145e-04,
+         -1.5207e-04, -2.6959e-04]])
+[Epoch 120]
+==================== Evaluation ====================
+F1: 0.1486 	
+MAP: 0.1832 	
+MRR: 0.2477 	
+MNDCG: 0.274 	
+[Epoch 121] Loss: 69.3153992 Forward: 2.192s Backward: 2.448s 
+[Epoch 122] Loss: 69.3159561 Forward: 2.857s Backward: 1.394s 
+[Epoch 123] Loss: 69.3153763 Forward: 0.909s Backward: 0.991s 
+[Epoch 124] Loss: 69.3156891 Forward: 0.898s Backward: 1.145s 
+[Epoch 125] Loss: 69.3155899 Forward: 0.903s Backward: 1.071s 
+[Epoch 126] Loss: 69.3152466 Forward: 0.910s Backward: 1.095s 
+[Epoch 127] Loss: 69.3153000 Forward: 1.075s Backward: 0.615s 
+[Epoch 128] Loss: 69.3152771 Forward: 0.908s Backward: 0.687s 
+[Epoch 129] Loss: 69.3153763 Forward: 2.098s Backward: 1.010s 
+[Epoch 130] Loss: 69.3156662 Forward: 1.909s Backward: 1.018s 
+[Epoch 131] Loss: 69.3155594 Forward: 2.267s Backward: 1.099s 
+[Epoch 132] Loss: 69.3157425 Forward: 1.938s Backward: 1.088s 
+[Epoch 133] Loss: 69.3153000 Forward: 0.810s Backward: 0.611s 
+[Epoch 134] Loss: 69.3153458 Forward: 1.578s Backward: 0.986s 
+[Epoch 135] Loss: 69.3154449 Forward: 1.810s Backward: 1.006s 
+[Epoch 136] Loss: 69.3154373 Forward: 1.755s Backward: 0.632s 
+[Epoch 137] Loss: 69.3154602 Forward: 0.919s Backward: 1.172s 
+[Epoch 138] Loss: 69.3153992 Forward: 1.540s Backward: 1.986s 
+[Epoch 139] Loss: 69.3157501 Forward: 2.181s Backward: 2.978s 
+[Epoch 140] Loss: 69.3152771 Forward: 2.525s Backward: 2.089s 
+embeddings: tensor([[-3.3549e-04, -4.0607e-04, -2.3306e-04,  ..., -3.4815e-04,
+         -4.0301e-04,  2.4929e-03],
+        [-5.5844e-04, -2.7412e-04, -2.1536e-05,  ..., -2.2469e-04,
+         -9.2385e-05,  1.1189e-03],
+        [-4.6589e-04, -1.4568e-04, -2.4183e-04,  ..., -4.0915e-04,
+         -3.4911e-04, -2.3072e-04],
+        ...,
+        [-2.5853e-04, -2.8500e-04, -1.9960e-04,  ..., -3.5209e-04,
+         -2.6060e-04, -3.1187e-04],
+        [-3.1083e-04, -2.8942e-04, -2.0582e-04,  ..., -1.4228e-04,
+         -2.5000e-04, -1.8143e-04],
+        [-2.1006e-04, -2.2543e-04, -2.1221e-04,  ..., -2.3801e-04,
+         -1.4723e-04, -2.5824e-04]])
+[Epoch 140]
+==================== Evaluation ====================
+F1: 0.1493 	
+MAP: 0.1846 	
+MRR: 0.2513 	
+MNDCG: 0.2754 	
+[Epoch 141] Loss: 69.3153076 Forward: 3.078s Backward: 2.271s 
+[Epoch 142] Loss: 69.3156204 Forward: 2.948s Backward: 2.110s 
+[Epoch 143] Loss: 69.3152313 Forward: 2.856s Backward: 2.040s 
+[Epoch 144] Loss: 69.3152618 Forward: 3.347s Backward: 2.011s 
+[Epoch 145] Loss: 69.3152390 Forward: 2.944s Backward: 2.099s 
+[Epoch 146] Loss: 69.3151474 Forward: 2.778s Backward: 1.966s 
+[Epoch 147] Loss: 69.3155518 Forward: 3.120s Backward: 2.916s 
+[Epoch 148] Loss: 69.3154373 Forward: 3.295s Backward: 2.881s 
+[Epoch 149] Loss: 69.3157654 Forward: 3.026s Backward: 3.111s 
+[Epoch 150] Loss: 69.3153687 Forward: 3.061s Backward: 2.528s 
+[Epoch 151] Loss: 69.3153076 Forward: 2.927s Backward: 2.762s 
+[Epoch 152] Loss: 69.3153610 Forward: 2.826s Backward: 2.506s 
+[Epoch 153] Loss: 69.3151321 Forward: 2.766s Backward: 2.517s 
+[Epoch 154] Loss: 69.3152924 Forward: 4.072s Backward: 3.409s 
+[Epoch 155] Loss: 69.3156357 Forward: 3.928s Backward: 3.049s 
+[Epoch 156] Loss: 69.3151932 Forward: 4.031s Backward: 2.686s 
+[Epoch 157] Loss: 69.3153381 Forward: 4.225s Backward: 3.008s 
+[Epoch 158] Loss: 69.3153992 Forward: 4.191s Backward: 2.974s 
+[Epoch 159] Loss: 69.3151321 Forward: 3.588s Backward: 2.542s 
+[Epoch 160] Loss: 69.3151245 Forward: 3.694s Backward: 2.880s 
+embeddings: tensor([[-3.2254e-04, -3.9374e-04, -2.2767e-04,  ..., -3.4466e-04,
+         -3.8878e-04,  2.0288e-03],
+        [-5.3378e-04, -2.6747e-04, -2.5231e-05,  ..., -2.2135e-04,
+         -9.5651e-05,  4.6386e-04],
+        [-4.4798e-04, -1.4482e-04, -2.3763e-04,  ..., -4.0505e-04,
+         -3.3613e-04, -2.1857e-04],
+        ...,
+        [-2.5263e-04, -2.8816e-04, -1.9488e-04,  ..., -3.4539e-04,
+         -2.5132e-04, -3.0119e-04],
+        [-3.0127e-04, -2.8717e-04, -2.0266e-04,  ..., -1.3798e-04,
+         -2.4478e-04, -1.7740e-04],
+        [-2.0435e-04, -2.2470e-04, -2.0711e-04,  ..., -2.3594e-04,
+         -1.4297e-04, -2.4812e-04]])
+[Epoch 160]
+==================== Evaluation ====================
+F1: 0.1505 	
+MAP: 0.1884 	
+MRR: 0.2536 	
+MNDCG: 0.2785 	
+[Epoch 161] Loss: 69.3155441 Forward: 4.242s Backward: 3.058s 
+[Epoch 162] Loss: 69.3151169 Forward: 3.913s Backward: 2.710s 
+[Epoch 163] Loss: 69.3155670 Forward: 4.490s Backward: 2.831s 
+[Epoch 164] Loss: 69.3152771 Forward: 5.417s Backward: 2.689s 
+[Epoch 165] Loss: 69.3156052 Forward: 3.601s Backward: 2.803s 
+[Epoch 166] Loss: 69.3156128 Forward: 3.395s Backward: 2.276s 
+[Epoch 167] Loss: 69.3153534 Forward: 2.707s Backward: 2.093s 
+[Epoch 168] Loss: 69.3152313 Forward: 2.700s Backward: 2.484s 
+[Epoch 169] Loss: 69.3155060 Forward: 1.732s Backward: 0.599s 
+[Epoch 170] Loss: 69.3153076 Forward: 1.079s Backward: 0.504s 
+[Epoch 171] Loss: 69.3152695 Forward: 0.828s Backward: 0.560s 
+[Epoch 172] Loss: 69.3151245 Forward: 1.035s Backward: 0.504s 
+[Epoch 173] Loss: 69.3152618 Forward: 0.899s Backward: 0.484s 
+[Epoch 174] Loss: 69.3152313 Forward: 1.202s Backward: 0.768s 
+[Epoch 175] Loss: 69.3152161 Forward: 0.803s Backward: 0.456s 
+[Epoch 176] Loss: 69.3155289 Forward: 0.988s Backward: 1.173s 
+[Epoch 177] Loss: 69.3153839 Forward: 1.842s Backward: 1.557s 
+[Epoch 178] Loss: 69.3151627 Forward: 1.721s Backward: 1.490s 
+[Epoch 179] Loss: 69.3151474 Forward: 2.481s Backward: 1.414s 
+[Epoch 180] Loss: 69.3151474 Forward: 1.575s Backward: 1.305s 
+embeddings: tensor([[-3.0828e-04, -3.8250e-04, -2.2442e-04,  ..., -3.4230e-04,
+         -3.7274e-04,  1.6614e-03],
+        [-5.0828e-04, -2.6184e-04, -3.1154e-05,  ..., -2.1949e-04,
+         -9.6442e-05, -1.9409e-08],
+        [-4.2885e-04, -1.4470e-04, -2.3497e-04,  ..., -4.0183e-04,
+         -3.2110e-04, -2.0570e-04],
+        ...,
+        [-2.4670e-04, -2.9131e-04, -1.9094e-04,  ..., -3.3934e-04,
+         -2.4055e-04, -2.8869e-04],
+        [-2.9153e-04, -2.8611e-04, -1.9986e-04,  ..., -1.3527e-04,
+         -2.3829e-04, -1.7143e-04],
+        [-1.9787e-04, -2.2558e-04, -2.0337e-04,  ..., -2.3614e-04,
+         -1.3729e-04, -2.3731e-04]])
+[Epoch 180]
+==================== Evaluation ====================
+F1: 0.1443 	
+MAP: 0.185 	
+MRR: 0.2528 	
+MNDCG: 0.2731 	
+[Epoch 181] Loss: 69.3152542 Forward: 1.047s Backward: 0.583s 
+[Epoch 182] Loss: 69.3153000 Forward: 1.335s Backward: 2.046s 
+[Epoch 183] Loss: 69.3151855 Forward: 1.956s Backward: 1.957s 
+[Epoch 184] Loss: 69.3151703 Forward: 3.395s Backward: 2.017s 
+[Epoch 185] Loss: 69.3153305 Forward: 3.499s Backward: 2.099s 
+[Epoch 186] Loss: 69.3153152 Forward: 2.894s Backward: 2.228s 
+[Epoch 187] Loss: 69.3154297 Forward: 3.761s Backward: 2.125s 
+[Epoch 188] Loss: 69.3152390 Forward: 3.502s Backward: 2.256s 
+[Epoch 189] Loss: 69.3151855 Forward: 3.418s Backward: 2.201s 
+[Epoch 190] Loss: 69.3152695 Forward: 3.600s Backward: 2.213s 
+[Epoch 191] Loss: 69.3152084 Forward: 3.420s Backward: 1.978s 
+[Epoch 192] Loss: 69.3151016 Forward: 4.391s Backward: 2.528s 
+[Epoch 193] Loss: 69.3152695 Forward: 4.393s Backward: 2.958s 
+[Epoch 194] Loss: 69.3158264 Forward: 4.315s Backward: 2.740s 
+[Epoch 195] Loss: 69.3150940 Forward: 4.106s Backward: 2.899s 
+[Epoch 196] Loss: 69.3152390 Forward: 4.079s Backward: 3.063s 
+[Epoch 197] Loss: 69.3152237 Forward: 4.351s Backward: 2.970s 
+[Epoch 198] Loss: 69.3150787 Forward: 3.189s Backward: 2.812s 
+[Epoch 199] Loss: 69.3151016 Forward: 4.234s Backward: 2.760s 
+[Epoch 200] Loss: 69.3153229 Forward: 4.042s Backward: 3.164s 
+embeddings: tensor([[-2.9455e-04, -3.7024e-04, -2.1970e-04,  ..., -3.3852e-04,
+         -3.5653e-04,  1.5427e-03],
+        [-4.8402e-04, -2.5483e-04, -3.5176e-05,  ..., -2.1638e-04,
+         -9.6371e-05, -1.8170e-06],
+        [-4.1014e-04, -1.4327e-04, -2.3076e-04,  ..., -3.9684e-04,
+         -3.0569e-04, -1.9136e-04],
+        ...,
+        [-2.4063e-04, -2.9297e-04, -1.8546e-04,  ..., -3.3269e-04,
+         -2.2906e-04, -2.7462e-04],
+        [-2.8180e-04, -2.8375e-04, -1.9563e-04,  ..., -1.3276e-04,
+         -2.3160e-04, -1.6420e-04],
+        [-1.9133e-04, -2.2463e-04, -1.9834e-04,  ..., -2.3537e-04,
+         -1.3142e-04, -2.2557e-04]])
+[Epoch 200]
+==================== Evaluation ====================
+F1: 0.136 	
+MAP: 0.1792 	
+MRR: 0.2422 	
+MNDCG: 0.2612 	
+[Epoch 201] Loss: 69.3152161 Forward: 4.180s Backward: 2.950s 
+[Epoch 202] Loss: 69.3152618 Forward: 4.494s Backward: 2.766s 
+[Epoch 203] Loss: 69.3151703 Forward: 5.312s Backward: 2.477s 
+[Epoch 204] Loss: 69.3152084 Forward: 4.557s Backward: 2.365s 
+[Epoch 205] Loss: 69.3152924 Forward: 4.993s Backward: 2.490s 
+[Epoch 206] Loss: 69.3152771 Forward: 4.614s Backward: 1.902s 
+[Epoch 207] Loss: 69.3152008 Forward: 3.631s Backward: 2.297s 
+[Epoch 208] Loss: 69.3150101 Forward: 2.576s Backward: 2.085s 
+[Epoch 209] Loss: 69.3151093 Forward: 1.845s Backward: 1.085s 
+[Epoch 210] Loss: 69.3150406 Forward: 0.979s Backward: 0.501s 
+[Epoch 211] Loss: 69.3150635 Forward: 0.930s Backward: 0.495s 
+[Epoch 212] Loss: 69.3151093 Forward: 0.984s Backward: 0.514s 
+[Epoch 213] Loss: 69.3150635 Forward: 0.970s Backward: 0.529s 
+[Epoch 214] Loss: 69.3155060 Forward: 0.974s Backward: 0.497s 
+[Epoch 215] Loss: 69.3151016 Forward: 1.026s Backward: 0.565s 
+[Epoch 216] Loss: 69.3151245 Forward: 0.912s Backward: 0.678s 
+[Epoch 217] Loss: 69.3150330 Forward: 1.844s Backward: 1.090s 
+[Epoch 218] Loss: 69.3150330 Forward: 1.967s Backward: 1.001s 
+[Epoch 219] Loss: 69.3150635 Forward: 2.138s Backward: 1.005s 
+[Epoch 220] Loss: 69.3150635 Forward: 1.564s Backward: 1.311s 
+embeddings: tensor([[-2.8435e-04, -3.5802e-04, -2.1341e-04,  ..., -3.3416e-04,
+         -3.4214e-04,  1.2836e-03],
+        [-4.6353e-04, -2.4774e-04, -3.7407e-05,  ..., -2.1299e-04,
+         -9.7329e-05, -4.4363e-06],
+        [-3.9420e-04, -1.4151e-04, -2.2506e-04,  ..., -3.9104e-04,
+         -2.9249e-04, -1.7904e-04],
+        ...,
+        [-2.3590e-04, -2.9420e-04, -1.7950e-04,  ..., -3.2506e-04,
+         -2.2021e-04, -2.6166e-04],
+        [-2.7434e-04, -2.8110e-04, -1.9138e-04,  ..., -1.3015e-04,
+         -2.2633e-04, -1.5789e-04],
+        [-1.8976e-04, -2.2334e-04, -1.9281e-04,  ..., -2.3407e-04,
+         -1.2707e-04, -2.1509e-04]])
+[Epoch 220]
+==================== Evaluation ====================
+F1: 0.1373 	
+MAP: 0.179 	
+MRR: 0.2397 	
+MNDCG: 0.2614 	
+[Epoch 221] Loss: 69.3151932 Forward: 2.021s Backward: 1.784s 
+[Epoch 222] Loss: 69.3150406 Forward: 1.950s Backward: 1.357s 
+[Epoch 223] Loss: 69.3151703 Forward: 2.311s Backward: 1.115s 
+[Epoch 224] Loss: 69.3151321 Forward: 1.921s Backward: 1.238s 
+[Epoch 225] Loss: 69.3150482 Forward: 0.927s Backward: 0.898s 
+[Epoch 226] Loss: 69.3150330 Forward: 1.330s Backward: 1.666s 
+[Epoch 227] Loss: 69.3150940 Forward: 2.497s Backward: 3.740s 
+[Epoch 228] Loss: 69.3150711 Forward: 2.561s Backward: 3.035s 
+[Epoch 229] Loss: 69.3152390 Forward: 2.364s Backward: 3.411s 
+[Epoch 230] Loss: 69.3158417 Forward: 2.315s Backward: 3.392s 
+[Epoch 231] Loss: 69.3151016 Forward: 2.389s Backward: 3.613s 
+[Epoch 232] Loss: 69.3151321 Forward: 2.669s Backward: 3.335s 
+[Epoch 233] Loss: 69.3151016 Forward: 2.493s Backward: 3.112s 
+[Epoch 234] Loss: 69.3150330 Forward: 2.192s Backward: 3.108s 
+[Epoch 235] Loss: 69.3150940 Forward: 2.184s Backward: 3.227s 
+[Epoch 236] Loss: 69.3150558 Forward: 2.265s Backward: 3.493s 
+[Epoch 237] Loss: 69.3150482 Forward: 2.690s Backward: 3.093s 
+[Epoch 238] Loss: 69.3149948 Forward: 2.108s Backward: 3.120s 
+[Epoch 239] Loss: 69.3151169 Forward: 2.589s Backward: 3.141s 
+[Epoch 240] Loss: 69.3149719 Forward: 3.768s Backward: 2.895s 
+embeddings: tensor([[-2.7349e-04, -3.4640e-04, -2.0891e-04,  ..., -3.2919e-04,
+         -3.2719e-04,  1.0669e-03],
+        [-4.4333e-04, -2.4115e-04, -4.1016e-05,  ..., -2.0941e-04,
+         -9.6601e-05, -6.3560e-06],
+        [-3.7812e-04, -1.3987e-04, -2.2140e-04,  ..., -3.8459e-04,
+         -2.7870e-04, -1.6692e-04],
+        ...,
+        [-2.2928e-04, -2.9491e-04, -1.7717e-04,  ..., -3.1631e-04,
+         -2.1135e-04, -2.4843e-04],
+        [-2.6548e-04, -2.7867e-04, -1.8883e-04,  ..., -1.2703e-04,
+         -2.1997e-04, -1.5117e-04],
+        [-1.8554e-04, -2.2230e-04, -1.8923e-04,  ..., -2.3125e-04,
+         -1.2186e-04, -2.0477e-04]])
+[Epoch 240]
+==================== Evaluation ====================
+F1: 0.1369 	
+MAP: 0.1862 	
+MRR: 0.2546 	
+MNDCG: 0.2682 	
+[Epoch 241] Loss: 69.3151627 Forward: 4.407s Backward: 3.271s 
+[Epoch 242] Loss: 69.3150024 Forward: 3.728s Backward: 2.778s 
+[Epoch 243] Loss: 69.3150635 Forward: 4.120s Backward: 2.816s 
+[Epoch 244] Loss: 69.3151474 Forward: 4.254s Backward: 3.199s 
+[Epoch 245] Loss: 69.3150482 Forward: 4.234s Backward: 3.474s 
+[Epoch 246] Loss: 69.3151169 Forward: 4.396s Backward: 3.435s 
+[Epoch 247] Loss: 69.3151398 Forward: 4.383s Backward: 3.280s 
+[Epoch 248] Loss: 69.3150940 Forward: 6.012s Backward: 2.609s 
+[Epoch 249] Loss: 69.3151245 Forward: 6.036s Backward: 3.187s 
+[Epoch 250] Loss: 69.3150711 Forward: 2.999s Backward: 2.963s 
+[Epoch 251] Loss: 69.3151169 Forward: 2.639s Backward: 2.908s 
+[Epoch 252] Loss: 69.3150253 Forward: 2.868s Backward: 2.515s 
+[Epoch 253] Loss: 69.3150787 Forward: 3.205s Backward: 2.655s 
+[Epoch 254] Loss: 69.3151398 Forward: 3.319s Backward: 2.597s 
+[Epoch 255] Loss: 69.3150482 Forward: 3.082s Backward: 2.444s 
+[Epoch 256] Loss: 69.3150024 Forward: 2.901s Backward: 2.265s 
+[Epoch 257] Loss: 69.3151016 Forward: 3.046s Backward: 2.588s 
+[Epoch 258] Loss: 69.3152313 Forward: 3.614s Backward: 2.692s 
+[Epoch 259] Loss: 69.3150940 Forward: 3.100s Backward: 2.309s 
+[Epoch 260] Loss: 69.3151398 Forward: 2.902s Backward: 2.341s 
+embeddings: tensor([[-2.6313e-04, -3.3603e-04, -2.0375e-04,  ..., -3.2458e-04,
+         -3.1148e-04,  7.1889e-04],
+        [-4.2383e-04, -2.3568e-04, -4.3765e-05,  ..., -2.0667e-04,
+         -9.4364e-05, -9.3150e-06],
+        [-3.6276e-04, -1.3913e-04, -2.1657e-04,  ..., -3.7825e-04,
+         -2.6354e-04, -1.5682e-04],
+        ...,
+        [-2.2402e-04, -2.9588e-04, -1.7389e-04,  ..., -3.0825e-04,
+         -2.0114e-04, -2.3573e-04],
+        [-2.5783e-04, -2.7720e-04, -1.8618e-04,  ..., -1.2484e-04,
+         -2.1203e-04, -1.4504e-04],
+        [-1.8089e-04, -2.2259e-04, -1.8530e-04,  ..., -2.2945e-04,
+         -1.1583e-04, -1.9542e-04]])
+[Epoch 260]
+==================== Evaluation ====================
+F1: 0.1491 	
+MAP: 0.1898 	
+MRR: 0.248 	
+MNDCG: 0.2775 	
+[Epoch 261] Loss: 69.3150635 Forward: 0.757s Backward: 0.795s 
+[Epoch 262] Loss: 69.3152313 Forward: 0.909s Backward: 0.603s 
+[Epoch 263] Loss: 69.3150558 Forward: 0.921s Backward: 0.684s 
+[Epoch 264] Loss: 69.3150406 Forward: 0.969s Backward: 0.637s 
+[Epoch 265] Loss: 69.3151550 Forward: 0.988s Backward: 0.511s 
+[Epoch 266] Loss: 69.3149872 Forward: 1.491s Backward: 0.721s 
+[Epoch 267] Loss: 69.3150940 Forward: 2.671s Backward: 1.111s 
+[Epoch 268] Loss: 69.3150330 Forward: 2.830s Backward: 1.145s 
+[Epoch 269] Loss: 69.3149948 Forward: 2.599s Backward: 1.124s 
+[Epoch 270] Loss: 69.3150024 Forward: 1.679s Backward: 0.526s 
+[Epoch 271] Loss: 69.3149796 Forward: 0.890s Backward: 0.814s 
+[Epoch 272] Loss: 69.3152161 Forward: 1.720s Backward: 1.173s 
+[Epoch 273] Loss: 69.3150711 Forward: 2.331s Backward: 1.255s 
+[Epoch 274] Loss: 69.3150253 Forward: 1.386s Backward: 0.531s 
+[Epoch 275] Loss: 69.3150177 Forward: 1.166s Backward: 0.950s 
+[Epoch 276] Loss: 69.3150101 Forward: 3.684s Backward: 1.621s 
+[Epoch 277] Loss: 69.3150787 Forward: 4.680s Backward: 1.486s 
+[Epoch 278] Loss: 69.3150177 Forward: 4.532s Backward: 1.600s 
+[Epoch 279] Loss: 69.3149643 Forward: 4.388s Backward: 1.876s 
+[Epoch 280] Loss: 69.3150024 Forward: 4.587s Backward: 2.108s 
+embeddings: tensor([[-2.5420e-04, -3.2556e-04, -1.9798e-04,  ..., -3.1814e-04,
+         -2.9614e-04,  5.6027e-04],
+        [-4.0606e-04, -2.2983e-04, -4.5965e-05,  ..., -2.0222e-04,
+         -9.1779e-05, -1.0332e-05],
+        [-3.4890e-04, -1.3785e-04, -2.1102e-04,  ..., -3.7012e-04,
+         -2.4875e-04, -1.4580e-04],
+        ...,
+        [-2.1940e-04, -2.9627e-04, -1.6917e-04,  ..., -2.9937e-04,
+         -1.9120e-04, -2.2138e-04],
+        [-2.5064e-04, -2.7566e-04, -1.8258e-04,  ..., -1.2198e-04,
+         -2.0400e-04, -1.3723e-04],
+        [-1.7896e-04, -2.2248e-04, -1.8110e-04,  ..., -2.2693e-04,
+         -1.1014e-04, -1.8533e-04]])
+[Epoch 280]
+==================== Evaluation ====================
+F1: 0.1493 	
+MAP: 0.1948 	
+MRR: 0.2523 	
+MNDCG: 0.2816 	
+[Epoch 281] Loss: 69.3150024 Forward: 1.637s Backward: 2.061s 
+[Epoch 282] Loss: 69.3152008 Forward: 2.014s Backward: 1.823s 
+[Epoch 283] Loss: 69.3149796 Forward: 2.192s Backward: 1.855s 
+[Epoch 284] Loss: 69.3149872 Forward: 6.119s Backward: 2.203s 
+[Epoch 285] Loss: 69.3150940 Forward: 7.085s Backward: 2.110s 
+[Epoch 286] Loss: 69.3150330 Forward: 7.286s Backward: 2.101s 
+[Epoch 287] Loss: 69.3149567 Forward: 6.419s Backward: 2.025s 
+[Epoch 288] Loss: 69.3150024 Forward: 6.765s Backward: 2.225s 
+[Epoch 289] Loss: 69.3150940 Forward: 3.127s Backward: 2.193s 
+[Epoch 290] Loss: 69.3149796 Forward: 2.572s Backward: 2.076s 
+[Epoch 291] Loss: 69.3150101 Forward: 7.359s Backward: 2.470s 
+[Epoch 292] Loss: 69.3149567 Forward: 7.310s Backward: 2.165s 
+[Epoch 293] Loss: 69.3149567 Forward: 7.749s Backward: 2.166s 
+[Epoch 294] Loss: 69.3149414 Forward: 7.328s Backward: 2.056s 
+[Epoch 295] Loss: 69.3149643 Forward: 7.597s Backward: 1.806s 
+[Epoch 296] Loss: 69.3149796 Forward: 7.436s Backward: 1.478s 
+[Epoch 297] Loss: 69.3149948 Forward: 4.726s Backward: 1.404s 
+[Epoch 298] Loss: 69.3150024 Forward: 2.182s Backward: 1.602s 
+[Epoch 299] Loss: 69.3150864 Forward: 0.906s Backward: 0.970s 
+[Epoch 300] Loss: 69.3149643 Forward: 0.900s Backward: 0.901s 
+embeddings: tensor([[-2.4220e-04, -3.1551e-04, -1.9215e-04,  ..., -3.1207e-04,
+         -2.8159e-04,  9.2738e-05],
+        [-3.8577e-04, -2.2423e-04, -4.8008e-05,  ..., -1.9822e-04,
+         -8.9376e-05, -1.4012e-05],
+        [-3.3201e-04, -1.3654e-04, -2.0521e-04,  ..., -3.6218e-04,
+         -2.3502e-04, -1.3835e-04],
+        ...,
+        [-2.1185e-04, -2.9673e-04, -1.6312e-04,  ..., -2.9116e-04,
+         -1.8226e-04, -2.1236e-04],
+        [-2.4102e-04, -2.7413e-04, -1.7771e-04,  ..., -1.1971e-04,
+         -1.9646e-04, -1.3357e-04],
+        [-1.7245e-04, -2.2235e-04, -1.7657e-04,  ..., -2.2427e-04,
+         -1.0522e-04, -1.7789e-04]])
+[Epoch 300]
+==================== Evaluation ====================
+F1: 0.1501 	
+MAP: 0.185 	
+MRR: 0.2418 	
+MNDCG: 0.2749 	
+[Epoch 301] Loss: 69.3149872 Forward: 1.003s Backward: 0.918s 
+[Epoch 302] Loss: 69.3150253 Forward: 1.355s Backward: 2.013s 
+[Epoch 303] Loss: 69.3149796 Forward: 2.905s Backward: 2.319s 
+[Epoch 304] Loss: 69.3149490 Forward: 3.017s Backward: 1.977s 
+[Epoch 305] Loss: 69.3153152 Forward: 2.570s Backward: 1.746s 
+[Epoch 306] Loss: 69.3149872 Forward: 1.451s Backward: 2.630s 
+[Epoch 307] Loss: 69.3150101 Forward: 1.699s Backward: 2.468s 
+[Epoch 308] Loss: 69.3149567 Forward: 0.907s Backward: 1.039s 
+[Epoch 309] Loss: 69.3150406 Forward: 1.500s Backward: 1.511s 
+[Epoch 310] Loss: 69.3150177 Forward: 2.082s Backward: 1.417s 
+[Epoch 311] Loss: 69.3149948 Forward: 2.057s Backward: 1.328s 
+[Epoch 312] Loss: 69.3149719 Forward: 1.985s Backward: 1.213s 
+[Epoch 313] Loss: 69.3149414 Forward: 2.186s Backward: 1.182s 
+[Epoch 314] Loss: 69.3149948 Forward: 2.115s Backward: 1.281s 
+[Epoch 315] Loss: 69.3149948 Forward: 2.519s Backward: 1.298s 
+[Epoch 316] Loss: 69.3149338 Forward: 2.309s Backward: 1.204s 
+[Epoch 317] Loss: 69.3149261 Forward: 2.085s Backward: 1.333s 
+[Epoch 318] Loss: 69.3149261 Forward: 2.107s Backward: 1.169s 
+[Epoch 319] Loss: 69.3149338 Forward: 2.083s Backward: 1.200s 
+[Epoch 320] Loss: 69.3149719 Forward: 2.031s Backward: 1.309s 
+embeddings: tensor([[-2.2990e-04, -3.0516e-04, -1.8551e-04,  ..., -3.0656e-04,
+         -2.6882e-04, -4.6970e-06],
+        [-3.6549e-04, -2.1829e-04, -4.9060e-05,  ..., -1.9520e-04,
+         -8.8227e-05, -1.8718e-05],
+        [-3.1507e-04, -1.3436e-04, -1.9850e-04,  ..., -3.5481e-04,
+         -2.2320e-04, -1.3247e-04],
+        ...,
+        [-2.0478e-04, -2.9566e-04, -1.5689e-04,  ..., -2.8359e-04,
+         -1.7537e-04, -2.0382e-04],
+        [-2.3200e-04, -2.7179e-04, -1.7281e-04,  ..., -1.1813e-04,
+         -1.9061e-04, -1.3000e-04],
+        [-1.6467e-04, -2.2148e-04, -1.7183e-04,  ..., -2.2212e-04,
+         -1.0195e-04, -1.7161e-04]])
+[Epoch 320]
+==================== Evaluation ====================
+F1: 0.1501 	
+MAP: 0.1828 	
+MRR: 0.2355 	
+MNDCG: 0.2723 	
+[Epoch 321] Loss: 69.3149338 Forward: 2.350s Backward: 1.206s 
+[Epoch 322] Loss: 69.3149872 Forward: 2.584s Backward: 1.414s 
+[Epoch 323] Loss: 69.3149185 Forward: 2.465s Backward: 1.207s 
+[Epoch 324] Loss: 69.3149338 Forward: 2.232s Backward: 1.299s 
+[Epoch 325] Loss: 69.3149414 Forward: 2.164s Backward: 1.131s 
+[Epoch 326] Loss: 69.3149338 Forward: 2.268s Backward: 1.138s 
+[Epoch 327] Loss: 69.3149643 Forward: 2.201s Backward: 1.387s 
+[Epoch 328] Loss: 69.3149490 Forward: 2.299s Backward: 1.213s 
+[Epoch 329] Loss: 69.3149948 Forward: 2.161s Backward: 1.309s 
+[Epoch 330] Loss: 69.3150024 Forward: 2.598s Backward: 1.393s 
+[Epoch 331] Loss: 69.3149490 Forward: 2.217s Backward: 1.696s 
+[Epoch 332] Loss: 69.3149109 Forward: 4.297s Backward: 1.379s 
+[Epoch 333] Loss: 69.3149338 Forward: 3.342s Backward: 1.485s 
+[Epoch 334] Loss: 69.3150101 Forward: 3.713s Backward: 1.762s 
+[Epoch 335] Loss: 69.3149872 Forward: 3.446s Backward: 2.068s 
+[Epoch 336] Loss: 69.3149490 Forward: 3.911s Backward: 1.689s 
+[Epoch 337] Loss: 69.3149414 Forward: 3.915s Backward: 2.402s 
+[Epoch 338] Loss: 69.3149490 Forward: 4.109s Backward: 2.661s 
+[Epoch 339] Loss: 69.3149338 Forward: 3.912s Backward: 3.032s 
+[Epoch 340] Loss: 69.3149490 Forward: 3.201s Backward: 2.957s 
+embeddings: tensor([[-2.1733e-04, -2.9485e-04, -1.7948e-04,  ..., -3.0017e-04,
+         -2.5688e-04, -7.7093e-06],
+        [-3.4537e-04, -2.1228e-04, -5.0574e-05,  ..., -1.9137e-04,
+         -8.7260e-05, -2.0899e-05],
+        [-2.9785e-04, -1.3181e-04, -1.9232e-04,  ..., -3.4650e-04,
+         -2.1248e-04, -1.2477e-04],
+        ...,
+        [-1.9653e-04, -2.9388e-04, -1.5104e-04,  ..., -2.7533e-04,
+         -1.6936e-04, -1.9373e-04],
+        [-2.2177e-04, -2.6883e-04, -1.6837e-04,  ..., -1.1594e-04,
+         -1.8520e-04, -1.2494e-04],
+        [-1.5614e-04, -2.1978e-04, -1.6753e-04,  ..., -2.1979e-04,
+         -9.9197e-05, -1.6425e-04]])
+[Epoch 340]
+==================== Evaluation ====================
+F1: 0.1505 	
+MAP: 0.1828 	
+MRR: 0.2387 	
+MNDCG: 0.274 	
+[Epoch 341] Loss: 69.3149796 Forward: 3.208s Backward: 3.704s 
+[Epoch 342] Loss: 69.3149261 Forward: 3.271s Backward: 3.114s 
+[Epoch 343] Loss: 69.3149338 Forward: 3.279s Backward: 2.718s 
+[Epoch 344] Loss: 69.3149261 Forward: 3.370s Backward: 2.596s 
+[Epoch 345] Loss: 69.3149185 Forward: 3.136s Backward: 1.062s 
+[Epoch 346] Loss: 69.3149643 Forward: 1.002s Backward: 0.519s 
+[Epoch 347] Loss: 69.3149338 Forward: 0.980s Backward: 0.443s 
+[Epoch 348] Loss: 69.3149338 Forward: 0.981s Backward: 0.507s 
+[Epoch 349] Loss: 69.3149338 Forward: 0.978s Backward: 0.505s 
+[Epoch 350] Loss: 69.3149109 Forward: 1.084s Backward: 0.456s 
+[Epoch 351] Loss: 69.3149109 Forward: 1.147s Backward: 0.445s 
+[Epoch 352] Loss: 69.3149261 Forward: 0.883s Backward: 1.372s 
+[Epoch 353] Loss: 69.3149261 Forward: 2.150s Backward: 1.277s 
+[Epoch 354] Loss: 69.3149490 Forward: 2.070s Backward: 1.448s 
+[Epoch 355] Loss: 69.3149185 Forward: 2.297s Backward: 1.574s 
+[Epoch 356] Loss: 69.3149643 Forward: 2.027s Backward: 1.386s 
+[Epoch 357] Loss: 69.3149185 Forward: 2.101s Backward: 0.765s 
+[Epoch 358] Loss: 69.3149719 Forward: 1.210s Backward: 1.031s 
+[Epoch 359] Loss: 69.3149338 Forward: 2.062s Backward: 1.506s 
+[Epoch 360] Loss: 69.3149567 Forward: 2.290s Backward: 1.604s 
+embeddings: tensor([[-2.0519e-04, -2.8536e-04, -1.7322e-04,  ..., -2.9389e-04,
+         -2.4496e-04, -1.0523e-05],
+        [-3.2598e-04, -2.0707e-04, -5.1592e-05,  ..., -1.8772e-04,
+         -8.5708e-05, -2.2714e-05],
+        [-2.8119e-04, -1.2986e-04, -1.8587e-04,  ..., -3.3818e-04,
+         -2.0169e-04, -1.1773e-04],
+        ...,
+        [-1.8828e-04, -2.9231e-04, -1.4551e-04,  ..., -2.6734e-04,
+         -1.6288e-04, -1.8451e-04],
+        [-2.1157e-04, -2.6637e-04, -1.6387e-04,  ..., -1.1384e-04,
+         -1.7916e-04, -1.2041e-04],
+        [-1.4810e-04, -2.1870e-04, -1.6331e-04,  ..., -2.1743e-04,
+         -9.6279e-05, -1.5721e-04]])
+[Epoch 360]
+==================== Evaluation ====================
+F1: 0.1518 	
+MAP: 0.1747 	
+MRR: 0.2305 	
+MNDCG: 0.2688 	
+[Epoch 361] Loss: 69.3150101 Forward: 2.150s Backward: 1.978s 
+[Epoch 362] Loss: 69.3149261 Forward: 2.782s Backward: 1.891s 
+[Epoch 363] Loss: 69.3149261 Forward: 3.745s Backward: 2.194s 
+[Epoch 364] Loss: 69.3149414 Forward: 3.923s Backward: 1.861s 
+[Epoch 365] Loss: 69.3149414 Forward: 3.585s Backward: 2.128s 
+[Epoch 366] Loss: 69.3149719 Forward: 3.884s Backward: 1.838s 
+[Epoch 367] Loss: 69.3149033 Forward: 4.176s Backward: 1.869s 
+[Epoch 368] Loss: 69.3149185 Forward: 4.711s Backward: 1.989s 
+[Epoch 369] Loss: 69.3149338 Forward: 4.548s Backward: 1.777s 
+[Epoch 370] Loss: 69.3149033 Forward: 2.977s Backward: 1.611s 
+[Epoch 371] Loss: 69.3149185 Forward: 3.137s Backward: 1.876s 
+[Epoch 372] Loss: 69.3149109 Forward: 3.982s Backward: 1.890s 
+[Epoch 373] Loss: 69.3149185 Forward: 4.011s Backward: 2.227s 
+[Epoch 374] Loss: 69.3149338 Forward: 2.374s Backward: 1.930s 
+[Epoch 375] Loss: 69.3149261 Forward: 2.116s Backward: 1.801s 
+[Epoch 376] Loss: 69.3149033 Forward: 2.495s Backward: 1.803s 
+[Epoch 377] Loss: 69.3148956 Forward: 2.944s Backward: 1.716s 
+[Epoch 378] Loss: 69.3149719 Forward: 3.200s Backward: 2.009s 
+[Epoch 379] Loss: 69.3149414 Forward: 3.330s Backward: 1.796s 
+[Epoch 380] Loss: 69.3149109 Forward: 3.404s Backward: 1.883s 
+embeddings: tensor([[-1.9623e-04, -2.7700e-04, -1.6849e-04,  ..., -2.8772e-04,
+         -2.3349e-04, -1.1954e-05],
+        [-3.0986e-04, -2.0287e-04, -5.4029e-05,  ..., -1.8428e-04,
+         -8.4030e-05, -2.3221e-05],
+        [-2.6774e-04, -1.2867e-04, -1.8086e-04,  ..., -3.2989e-04,
+         -1.9151e-04, -1.1012e-04],
+        ...,
+        [-1.8297e-04, -2.9157e-04, -1.4147e-04,  ..., -2.5948e-04,
+         -1.5674e-04, -1.7367e-04],
+        [-2.0412e-04, -2.6454e-04, -1.6047e-04,  ..., -1.1183e-04,
+         -1.7328e-04, -1.1418e-04],
+        [-1.4318e-04, -2.1857e-04, -1.6039e-04,  ..., -2.1510e-04,
+         -9.3688e-05, -1.4949e-04]])
+[Epoch 380]
+==================== Evaluation ====================
+F1: 0.1506 	
+MAP: 0.1723 	
+MRR: 0.2332 	
+MNDCG: 0.2671 	
+[Epoch 381] Loss: 69.3148956 Forward: 3.007s Backward: 1.869s 
+[Epoch 382] Loss: 69.3149033 Forward: 3.027s Backward: 2.182s 
+[Epoch 383] Loss: 69.3149109 Forward: 3.033s Backward: 1.783s 
+[Epoch 384] Loss: 69.3149338 Forward: 3.001s Backward: 1.702s 
+[Epoch 385] Loss: 69.3149109 Forward: 3.006s Backward: 1.580s 
+[Epoch 386] Loss: 69.3149109 Forward: 3.993s Backward: 1.804s 
+[Epoch 387] Loss: 69.3149338 Forward: 3.779s Backward: 1.650s 
+[Epoch 388] Loss: 69.3149109 Forward: 3.772s Backward: 1.898s 
+[Epoch 389] Loss: 69.3148880 Forward: 3.785s Backward: 1.835s 
+[Epoch 390] Loss: 69.3149109 Forward: 3.668s Backward: 1.619s 
+[Epoch 391] Loss: 69.3149338 Forward: 4.022s Backward: 1.857s 
+[Epoch 392] Loss: 69.3149109 Forward: 3.893s Backward: 1.592s 
+[Epoch 393] Loss: 69.3149109 Forward: 3.938s Backward: 1.785s 
+[Epoch 394] Loss: 69.3149033 Forward: 3.709s Backward: 1.791s 
+[Epoch 395] Loss: 69.3148956 Forward: 3.082s Backward: 2.609s 
+[Epoch 396] Loss: 69.3149185 Forward: 3.326s Backward: 2.073s 
+[Epoch 397] Loss: 69.3149185 Forward: 3.700s Backward: 2.290s 
+[Epoch 398] Loss: 69.3148727 Forward: 3.610s Backward: 2.008s 
+[Epoch 399] Loss: 69.3149261 Forward: 3.608s Backward: 2.370s 
+[Epoch 400] Loss: 69.3149338 Forward: 2.518s Backward: 2.837s 
+embeddings: tensor([[-1.8608e-04, -2.6846e-04, -1.6332e-04,  ..., -2.8188e-04,
+         -2.2220e-04, -1.4773e-05],
+        [-2.9320e-04, -1.9835e-04, -5.5610e-05,  ..., -1.8127e-04,
+         -8.2026e-05, -2.5127e-05],
+        [-2.5347e-04, -1.2682e-04, -1.7536e-04,  ..., -3.2188e-04,
+         -1.8133e-04, -1.0456e-04],
+        ...,
+        [-1.7594e-04, -2.8979e-04, -1.3720e-04,  ..., -2.5214e-04,
+         -1.5026e-04, -1.6559e-04],
+        [-1.9528e-04, -2.6196e-04, -1.5666e-04,  ..., -1.1011e-04,
+         -1.6703e-04, -1.1012e-04],
+        [-1.3683e-04, -2.1759e-04, -1.5711e-04,  ..., -2.1285e-04,
+         -9.0994e-05, -1.4327e-04]])
+[Epoch 400]
+==================== Evaluation ====================
+F1: 0.1534 	
+MAP: 0.1818 	
+MRR: 0.241 	
+MNDCG: 0.2762 	
+[Epoch 401] Loss: 69.3149033 Forward: 0.905s Backward: 0.615s 
+[Epoch 402] Loss: 69.3148956 Forward: 0.830s Backward: 0.471s 
+[Epoch 403] Loss: 69.3148956 Forward: 0.876s Backward: 0.434s 
+[Epoch 404] Loss: 69.3148804 Forward: 0.909s Backward: 0.690s 
+[Epoch 405] Loss: 69.3149567 Forward: 0.911s Backward: 0.790s 
+[Epoch 406] Loss: 69.3149109 Forward: 1.176s Backward: 1.333s 
+[Epoch 407] Loss: 69.3148880 Forward: 1.172s Backward: 1.002s 
+[Epoch 408] Loss: 69.3148956 Forward: 1.325s Backward: 0.998s 
+[Epoch 409] Loss: 69.3149261 Forward: 1.172s Backward: 1.099s 
+[Epoch 410] Loss: 69.3148804 Forward: 2.091s Backward: 1.331s 
+[Epoch 411] Loss: 69.3148880 Forward: 0.983s Backward: 0.719s 
+[Epoch 412] Loss: 69.3148956 Forward: 1.781s Backward: 1.319s 
+[Epoch 413] Loss: 69.3148956 Forward: 2.884s Backward: 1.321s 
+[Epoch 414] Loss: 69.3149033 Forward: 2.564s Backward: 1.439s 
+[Epoch 415] Loss: 69.3148804 Forward: 0.966s Backward: 0.684s 
+[Epoch 416] Loss: 69.3148880 Forward: 1.309s Backward: 1.700s 
+[Epoch 417] Loss: 69.3149414 Forward: 2.143s Backward: 2.377s 
+[Epoch 418] Loss: 69.3148804 Forward: 2.315s Backward: 1.999s 
+[Epoch 419] Loss: 69.3148651 Forward: 2.301s Backward: 2.577s 
+[Epoch 420] Loss: 69.3148804 Forward: 2.106s Backward: 2.983s 
+embeddings: tensor([[-1.7864e-04, -2.6024e-04, -1.5862e-04,  ..., -2.7619e-04,
+         -2.1159e-04, -1.7708e-05],
+        [-2.7998e-04, -1.9414e-04, -5.7332e-05,  ..., -1.7855e-04,
+         -8.0190e-05, -2.7206e-05],
+        [-2.4196e-04, -1.2503e-04, -1.7028e-04,  ..., -3.1419e-04,
+         -1.7187e-04, -9.9772e-05],
+        ...,
+        [-1.7031e-04, -2.8784e-04, -1.3355e-04,  ..., -2.4536e-04,
+         -1.4427e-04, -1.5782e-04],
+        [-1.8803e-04, -2.5941e-04, -1.5315e-04,  ..., -1.0877e-04,
+         -1.6106e-04, -1.0604e-04],
+        [-1.3259e-04, -2.1654e-04, -1.5413e-04,  ..., -2.1087e-04,
+         -8.8627e-05, -1.3763e-04]])
+[Epoch 420]
+==================== Evaluation ====================
+F1: 0.1597 	
+MAP: 0.1841 	
+MRR: 0.2473 	
+MNDCG: 0.2824 	
+[Epoch 421] Loss: 69.3148804 Forward: 1.941s Backward: 4.093s 
+[Epoch 422] Loss: 69.3148804 Forward: 2.408s Backward: 3.971s 
+[Epoch 423] Loss: 69.3148880 Forward: 2.205s Backward: 2.873s 
+[Epoch 424] Loss: 69.3148651 Forward: 2.123s Backward: 2.224s 
+[Epoch 425] Loss: 69.3149033 Forward: 3.696s Backward: 2.581s 
+[Epoch 426] Loss: 69.3148880 Forward: 3.232s Backward: 2.573s 
+[Epoch 427] Loss: 69.3148575 Forward: 2.375s Backward: 3.204s 
+[Epoch 428] Loss: 69.3148804 Forward: 2.586s Backward: 2.957s 
+[Epoch 429] Loss: 69.3148651 Forward: 2.648s Backward: 3.741s 
+[Epoch 430] Loss: 69.3148880 Forward: 2.509s Backward: 3.071s 
+[Epoch 431] Loss: 69.3148727 Forward: 2.021s Backward: 2.612s 
+[Epoch 432] Loss: 69.3148804 Forward: 2.194s Backward: 2.651s 
+[Epoch 433] Loss: 69.3148651 Forward: 2.232s Backward: 2.423s 
+[Epoch 434] Loss: 69.3148651 Forward: 2.563s Backward: 2.881s 
+[Epoch 435] Loss: 69.3148651 Forward: 2.456s Backward: 2.283s 
+[Epoch 436] Loss: 69.3148727 Forward: 2.992s Backward: 2.669s 
+[Epoch 437] Loss: 69.3148804 Forward: 3.308s Backward: 2.314s 
+[Epoch 438] Loss: 69.3148499 Forward: 2.880s Backward: 2.513s 
+[Epoch 439] Loss: 69.3148727 Forward: 3.101s Backward: 2.809s 
+[Epoch 440] Loss: 69.3148575 Forward: 2.804s Backward: 2.596s 
+embeddings: tensor([[-1.6999e-04, -2.5215e-04, -1.5354e-04,  ..., -2.7053e-04,
+         -2.0132e-04, -1.8661e-05],
+        [-2.6540e-04, -1.8988e-04, -5.8485e-05,  ..., -1.7593e-04,
+         -7.8218e-05, -2.7061e-05],
+        [-2.2943e-04, -1.2295e-04, -1.6493e-04,  ..., -3.0653e-04,
+         -1.6276e-04, -9.3578e-05],
+        ...,
+        [-1.6394e-04, -2.8527e-04, -1.2986e-04,  ..., -2.3856e-04,
+         -1.3830e-04, -1.4887e-04],
+        [-1.8008e-04, -2.5648e-04, -1.4958e-04,  ..., -1.0740e-04,
+         -1.5504e-04, -1.0058e-04],
+        [-1.2710e-04, -2.1499e-04, -1.5104e-04,  ..., -2.0876e-04,
+         -8.6264e-05, -1.3074e-04]])
+[Epoch 440]
+==================== Evaluation ====================
+F1: 0.1713 	
+MAP: 0.1905 	
+MRR: 0.2505 	
+MNDCG: 0.295 	
+[Epoch 441] Loss: 69.3148575 Forward: 1.781s Backward: 2.828s 
+[Epoch 442] Loss: 69.3148499 Forward: 1.673s Backward: 2.601s 
+[Epoch 443] Loss: 69.3148651 Forward: 2.224s Backward: 3.168s 
+[Epoch 444] Loss: 69.3148804 Forward: 2.302s Backward: 2.692s 
+[Epoch 445] Loss: 69.3148499 Forward: 2.303s Backward: 2.590s 
+[Epoch 446] Loss: 69.3148575 Forward: 2.119s Backward: 3.088s 
+[Epoch 447] Loss: 69.3148499 Forward: 2.142s Backward: 2.463s 
+[Epoch 448] Loss: 69.3148651 Forward: 2.291s Backward: 2.245s 
+[Epoch 449] Loss: 69.3148422 Forward: 2.084s Backward: 2.013s 
+[Epoch 450] Loss: 69.3148804 Forward: 2.694s Backward: 2.666s 
+[Epoch 451] Loss: 69.3148422 Forward: 1.130s Backward: 0.900s 
+[Epoch 452] Loss: 69.3148499 Forward: 0.834s Backward: 0.658s 
+[Epoch 453] Loss: 69.3148651 Forward: 0.928s Backward: 0.689s 
+[Epoch 454] Loss: 69.3148117 Forward: 0.907s Backward: 0.796s 
+[Epoch 455] Loss: 69.3148804 Forward: 0.986s Backward: 0.690s 
+[Epoch 456] Loss: 69.3148270 Forward: 1.083s Backward: 0.847s 
+[Epoch 457] Loss: 69.3148804 Forward: 0.964s Backward: 0.610s 
+[Epoch 458] Loss: 69.3148270 Forward: 1.782s Backward: 1.600s 
+[Epoch 459] Loss: 69.3148270 Forward: 1.848s Backward: 1.741s 
+[Epoch 460] Loss: 69.3148117 Forward: 1.718s Backward: 1.501s 
+embeddings: tensor([[-1.6177e-04, -2.4452e-04, -1.4850e-04,  ..., -2.6486e-04,
+         -1.9180e-04, -1.9692e-05],
+        [-2.5147e-04, -1.8594e-04, -5.9330e-05,  ..., -1.7332e-04,
+         -7.6561e-05, -2.7100e-05],
+        [-2.1746e-04, -1.2103e-04, -1.5954e-04,  ..., -2.9885e-04,
+         -1.5444e-04, -8.8017e-05],
+        ...,
+        [-1.5783e-04, -2.8267e-04, -1.2612e-04,  ..., -2.3187e-04,
+         -1.3293e-04, -1.4065e-04],
+        [-1.7240e-04, -2.5363e-04, -1.4587e-04,  ..., -1.0607e-04,
+         -1.4944e-04, -9.5608e-05],
+        [-1.2184e-04, -2.1357e-04, -1.4780e-04,  ..., -2.0647e-04,
+         -8.4248e-05, -1.2430e-04]])
+[Epoch 460]
+==================== Evaluation ====================
+F1: 0.169 	
+MAP: 0.1884 	
+MRR: 0.2565 	
+MNDCG: 0.2941 	
+[Epoch 461] Loss: 69.3148270 Forward: 3.391s Backward: 1.403s 
+[Epoch 462] Loss: 69.3148956 Forward: 0.997s Backward: 2.213s 
+[Epoch 463] Loss: 69.3148117 Forward: 2.119s Backward: 2.164s 
+[Epoch 464] Loss: 69.3148346 Forward: 2.214s Backward: 2.408s 
+[Epoch 465] Loss: 69.3147888 Forward: 2.181s Backward: 2.287s 
+[Epoch 466] Loss: 69.3148193 Forward: 3.236s Backward: 2.462s 
+[Epoch 467] Loss: 69.3148041 Forward: 9.049s Backward: 2.177s 
+[Epoch 468] Loss: 69.3148193 Forward: 4.722s Backward: 1.874s 
+[Epoch 469] Loss: 69.3147888 Forward: 2.117s Backward: 1.877s 
+[Epoch 470] Loss: 69.3148041 Forward: 3.092s Backward: 2.505s 
+[Epoch 471] Loss: 69.3148575 Forward: 3.036s Backward: 2.561s 
+[Epoch 472] Loss: 69.3147964 Forward: 2.945s Backward: 2.345s 
+[Epoch 473] Loss: 69.3147964 Forward: 2.427s Backward: 2.721s 
+[Epoch 474] Loss: 69.3148117 Forward: 2.358s Backward: 2.630s 
+[Epoch 475] Loss: 69.3147812 Forward: 2.766s Backward: 2.540s 
+[Epoch 476] Loss: 69.3148270 Forward: 3.070s Backward: 3.225s 
+[Epoch 477] Loss: 69.3147736 Forward: 2.178s Backward: 2.912s 
+[Epoch 478] Loss: 69.3148193 Forward: 2.883s Backward: 3.187s 
+[Epoch 479] Loss: 69.3148117 Forward: 5.940s Backward: 3.360s 
+[Epoch 480] Loss: 69.3147964 Forward: 3.262s Backward: 3.188s 
+embeddings: tensor([[-1.5462e-04, -2.3733e-04, -1.4455e-04,  ..., -2.5935e-04,
+         -1.8262e-04, -2.0457e-05],
+        [-2.3892e-04, -1.8231e-04, -6.0970e-05,  ..., -1.7090e-04,
+         -7.4784e-05, -2.6937e-05],
+        [-2.0672e-04, -1.1935e-04, -1.5517e-04,  ..., -2.9136e-04,
+         -1.4649e-04, -8.2815e-05],
+        ...,
+        [-1.5230e-04, -2.7988e-04, -1.2299e-04,  ..., -2.2539e-04,
+         -1.2758e-04, -1.3205e-04],
+        [-1.6536e-04, -2.5083e-04, -1.4254e-04,  ..., -1.0475e-04,
+         -1.4390e-04, -9.0200e-05],
+        [-1.1740e-04, -2.1228e-04, -1.4510e-04,  ..., -2.0430e-04,
+         -8.2315e-05, -1.1799e-04]])
+[Epoch 480]
+==================== Evaluation ====================
+F1: 0.1684 	
+MAP: 0.1888 	
+MRR: 0.2529 	
+MNDCG: 0.2933 	
+[Epoch 481] Loss: 69.3147964 Forward: 8.676s Backward: 2.825s 
+[Epoch 482] Loss: 69.3147659 Forward: 7.873s Backward: 2.510s 
+[Epoch 483] Loss: 69.3147736 Forward: 8.180s Backward: 2.795s 
+[Epoch 484] Loss: 69.3147964 Forward: 8.048s Backward: 2.982s 
+[Epoch 485] Loss: 69.3147812 Forward: 8.015s Backward: 3.060s 
+[Epoch 486] Loss: 69.3147888 Forward: 8.301s Backward: 3.627s 
+[Epoch 487] Loss: 69.3147659 Forward: 6.671s Backward: 2.126s 
+[Epoch 488] Loss: 69.3147964 Forward: 3.112s Backward: 2.429s 
+[Epoch 489] Loss: 69.3148041 Forward: 0.847s Backward: 0.534s 
+[Epoch 490] Loss: 69.3147430 Forward: 0.972s Backward: 0.502s 
+[Epoch 491] Loss: 69.3148041 Forward: 1.020s Backward: 0.581s 
+[Epoch 492] Loss: 69.3147507 Forward: 0.990s Backward: 0.482s 
+[Epoch 493] Loss: 69.3147354 Forward: 0.898s Backward: 0.450s 
+[Epoch 494] Loss: 69.3147583 Forward: 0.900s Backward: 0.767s 
+[Epoch 495] Loss: 69.3147278 Forward: 0.888s Backward: 0.434s 
+[Epoch 496] Loss: 69.3147278 Forward: 1.076s Backward: 1.384s 
+[Epoch 497] Loss: 69.3147812 Forward: 3.153s Backward: 1.552s 
+[Epoch 498] Loss: 69.3147354 Forward: 2.215s Backward: 1.380s 
+[Epoch 499] Loss: 69.3148041 Forward: 1.648s Backward: 1.256s 
+[Epoch 500] Loss: 69.3147278 Forward: 1.507s Backward: 0.761s 
+embeddings: tensor([[-1.4761e-04, -2.3102e-04, -1.3996e-04,  ..., -2.5406e-04,
+         -1.7431e-04, -2.1117e-05],
+        [-2.2686e-04, -1.7941e-04, -6.1740e-05,  ..., -1.6868e-04,
+         -7.3394e-05, -2.6640e-05],
+        [-1.9634e-04, -1.1833e-04, -1.5018e-04,  ..., -2.8403e-04,
+         -1.3971e-04, -7.7943e-05],
+        ...,
+        [-1.4686e-04, -2.7758e-04, -1.1970e-04,  ..., -2.1910e-04,
+         -1.2331e-04, -1.2408e-04],
+        [-1.5848e-04, -2.4857e-04, -1.3907e-04,  ..., -1.0347e-04,
+         -1.3912e-04, -8.5170e-05],
+        [-1.1311e-04, -2.1150e-04, -1.4208e-04,  ..., -2.0244e-04,
+         -8.0943e-05, -1.1188e-04]])
+[Epoch 500]
+==================== Evaluation ====================
+F1: 0.1702 	
+MAP: 0.1985 	
+MRR: 0.2524 	
+MNDCG: 0.2989 	
+Training is complete!
+Starting final evaluation...
+==================== Final Evaluation ====================
+[Final Scores] Total Epoch 500 	 Best Epoch 500
+F1: 0.1702 	
+MAP: 0.1985 	
+MRR: 0.2524 	
+MNDCG: 0.2989 	

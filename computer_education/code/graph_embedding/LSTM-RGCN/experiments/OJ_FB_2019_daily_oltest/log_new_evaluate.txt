@@ -1,0 +1,26 @@
+configs: {'log_file': 'log_new_evaluate', 'name': 'OJ_FB_2019daily_oltest', 'save_dir': 'OJ_FB_2019_daily_oltest'} {'epochs': 500, 'graph_batch_size': 30000, 'negative_sampling': {'head_prob': 0.5, 'sampling_rate': 10}, 'optimiser': {'algorithm': 'adam', 'learn_rate': 0.001, 'weight_decay': 0.0001}, 'sampling_method': 'edge-neighborhood', 'use_cuda': True, 'use_time': True, 'use_weight': False} {'activation': 'lrelu', 'bias_init': 'zeros', 'edge_dropout': {'general': 0.3, 'self_loop': 0.2, 'self_loop_type': 'schlichtkrull-dropout'}, 'hidden1_size': 200, 'hidden2_size': 200, 'include_gain': False, 'lstm_weight_init': 'xavier-normal', 'model': 'rgcn', 'node_embedding': 200, 'num_layers': 2, 'rgcn_weight_init': 'schlichtkrull-normal'} {'include_gain': False, 'l2_penalty': 1, 'l2_penalty_type': 'schlichtkrull-l2', 'loss_expand': 100, 'model': 'distmult', 'weight_init': 'standard-normal'} {'batch_size': 512, 'check_every': 5, 'filtered': True, 'use_valid': False, 'verbose': True}
+num_nodes = 5169 num_relations = 11
+[Epoch 1] Loss: 127.0282288 Forward: 20.888s Backward: 106.776s 
+[Epoch 2] Loss: 127.0210495 Forward: 22.699s Backward: 87.629s 
+[Epoch 3] Loss: 127.0154114 Forward: 23.577s Backward: 110.089s 
+[Epoch 4] Loss: 127.0086136 Forward: 24.256s Backward: 110.072s 
+[Epoch 5] Loss: 127.0017242 Forward: 25.163s Backward: 76.300s 
+embeddings: tensor([[ 9.2584e-03,  1.5618e-02, -1.3766e-04,  ..., -1.4558e-05,
+         -9.1111e-05, -1.4607e-04],
+        [ 1.1601e-02,  4.7659e-03,  6.1795e-04,  ..., -9.0750e-05,
+         -1.5883e-04, -3.3654e-06],
+        [ 1.0650e-02,  1.0979e-02, -1.1524e-04,  ..., -2.4493e-05,
+         -1.0662e-04, -1.3352e-04],
+        ...,
+        [-4.4261e-07,  3.2457e-03, -4.7838e-05,  ..., -3.3265e-05,
+         -6.1097e-05, -8.7116e-05],
+        [ 1.7950e-02,  6.6579e-03, -2.6918e-05,  ..., -2.8967e-05,
+         -1.5532e-04, -1.9285e-04],
+        [-2.8909e-05,  1.5903e-02, -4.8805e-05,  ...,  1.9389e-03,
+         -9.4637e-05, -1.4604e-04]])
+[Epoch 5]
+==================== Evaluation ====================
+F1: 0.0035 	
+MAP: 0.0007 	
+MRR: 0.0071 	
+MNDCG: 0.003 	

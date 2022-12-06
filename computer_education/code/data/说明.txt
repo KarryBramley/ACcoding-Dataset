@@ -1,0 +1,56 @@
+1. 日常提交 （提交和反馈数据都是2015-10-8到2020-4-14之间的记录）
+文件：results_daily.csv;
+字段：time，uid，pid，cnt
+总数：27 7799
+
+2. 比赛提交
+文件：results_contest.csv;
+字段：time，uid，pid ，cid，cnt
+总数：82 1258
+
+3. 日常反馈
+文件：results_daily.csv;
+字段：time，uid，pid，detail
+总条数：27 7799
+
+4. 比赛反馈
+文件：results_contest.csv;
+字段：time，uid，pid ，cid，detail( [(时间，结果id), ......] )
+总数：82 1259
+
+5. 题目-知识点（不是所有题目都有知识点）
+文件：problem_knowledgePoints.csv
+字段：pid, kid
+总数：2706
+
+6. 题目-比赛
+文件：problem_contest.csv
+字段：pid, cid
+总数：2984
+
+7. 反馈结果属性（还有几个不知道是啥）
+文件：results
+字段：rid，rname
+总数：12
+
+8. 知识点属性
+文件：knowledgePoints.csv
+字段：kid, kname
+总数：100
+
+9. 用户属性（去掉了提交数为0的）
+文件：users.csv
+字段：uid, grade（y结尾表示研究生），cid（学院）
+总数：16532
+P.S. 按学号来分年级和学院，还有点问题，有些本科生学号好像不是年级+学院+xxxx；
+       而且有学号的用户比较少，只有5000+
+
+10. 题目属性（数据库中所有题目，难度不是所有都有）
+文件：problems.csv
+字段：pid，pname，difficulty，creator_id（创建者）
+总数：2923
+
+11.比赛时间
+文件：contest.csv
+字段：cid，stime（开始时间），etime（结束时间）
+总数：398
