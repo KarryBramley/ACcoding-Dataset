@@ -84,7 +84,7 @@ Submissions:
 
 Figure (a), (b) and (c) are the distribution of knowledge points, feedback result types and submission languages, respectively.
 
-### ![数据集统计图](D:\Karry\陈开睿\大学\实验室\OJ论文\数据集\画图\数据集统计图.png)
+### ![Dataset statistics](./dataset%20statistics.png)
 
 ### Code Usage
 
@@ -96,4 +96,5 @@ The following example is about visualizing embedding results for programming tas
 cd data_process/experiment/visualize/
 python visual_transx.py
 ```
+### ![Visualization of task embeddings](./embedding%20visualization.jpg)
 
